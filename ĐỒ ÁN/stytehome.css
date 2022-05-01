@@ -1,0 +1,264 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+	width: 100%;
+	height: 4000px;
+
+  font-family: inherit;
+  position: relative;
+  overflow-x: hidden;
+
+}
+.load{
+   height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  
+  background-color: white;
+  z-index: 10000;
+}
+.load img{
+   width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.load p{
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translateX(-50%);
+}
+
+input:focus {
+        outline:none;
+    }
+.div_tren{
+	height: 100%;
+	width: 50px;
+	background-color: grey;
+}
+.chondanhmuc {
+  position: relative;
+  left: -45px;
+  text-align: center;
+  width: 160px;
+  height: 37px;
+  list-style: none;
+  border: 1px solid #6D6A6A;
+  
+  cursor: pointer;
+}
+.chondanhmuc   h3{
+  margin-top: 5px;
+  font-weight: !important;
+  color: #615E5E;
+}
+
+.chondanhmuc .chondanhmuc-content{
+  width: 160px;
+  list-style: none;
+  border: 1px solid;
+  line-height: 50px;
+  text-decoration: none;
+  position: absolute;
+  display: none;
+  background-color: whitesmoke;
+  margin-top: 10px;
+  z-index: 1;
+}
+.chondanhmuc .chondanhmuc-content div{
+  
+  border-bottom: 1px solid;
+}
+.chondanhmuc .chondanhmuc-content div:last-child{
+  border-bottom: none;
+}
+.chondanhmuc .chondanhmuc-content div:hover{
+  background-color: #D1D1D1;
+}
+.chondanhmuc:hover .chondanhmuc-content{
+
+  display: block;
+}
+.chondanhmuc .chondanhmuc-content div a{
+  color: black;
+  font-size: 17 px;
+  text-decoration: none;
+}
+.menudanhmucsanpham{
+  position: relative;
+}
+#khung_search{
+	height: 100px;
+	width: 100%;
+	
+
+}
+#thanh_search{
+	border: 1px solid;
+	opacity: 50%;
+	border-color: black;
+	border-radius: 5px;
+	width: 500px;
+	height:40px ;
+
+}
+td{
+	vertical-align: top;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #a62424;
+  color: white;
+}
+
+.chaychu{
+	font-size: 40px;
+	font-family: "Courier New";
+}
+
+
+#slideshow {
+  overflow: hidden;
+  height: 500px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.slide-wrapper {
+  width: 4000px;
+  -webkit-animation: slide 12s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 500px;
+  width: 1200px;
+
+}
+
+
+@-webkit-keyframes slide {
+  	20% {margin-left: 0px;}
+   30% {margin-left: -1200px;}
+   50% {margin-left: -1200px;}
+   60% {margin-left: -2400px;}
+   80% {margin-left: -2400px;}
+
+}
+/*silde*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+img.a{
+  vertical-align: sub;
+}
+.anh1 div{
+  max-width: 1240px;
+  overflow: hidden;
+}
+.anh1 div img{
+  max-width: 100%;
+}
+.anh1 div:hover img{
+
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.anhkep center{
+  max-width:1200px;
+  overflow: hidden;
+}
+.anhkep center a img{
+  max-width: 100%;
+  padding-right: 10px;
+}
+.anhkep center a:hover img{
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+.anhtren span{
+  vertical-align: text-top;
+}

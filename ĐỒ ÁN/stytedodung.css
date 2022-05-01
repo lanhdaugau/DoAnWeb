@@ -1,0 +1,204 @@
+
+.noichien a{
+	position: relative;
+	
+	font-size: 26px;
+	color: white;
+	text-decoration: none;
+	height: 49%;
+	
+	background-color: #a62424;
+
+}
+.noichien a:before{
+	border-bottom: 15px solid #a62424;
+    border-right: 10px solid  transparent;
+    border-top: 0 solid #a62424;;
+    border-left: 0;
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+   	
+}
+.noichien a:after {
+    border-bottom: 0 solid #a62424;
+    border-right: 10px solid transparent;
+    border-top: 15px solid  #a62424;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    right: -10px;
+
+}
+.noichiennen{
+	margin: 10px 10px 20px 10px;
+	background-color: #D7D5D5;
+
+}
+.dodung{
+	
+}
+.dodungnoichien{
+	margin: -20px +20px 10px 10px;
+	position: relative;
+	
+}
+.dodungnoichien span img{
+	width: 19%;
+	border: 0.5px solid #E2DFDF;
+	border-radius: 6px;
+	margin-right: -1px;
+	transition: all 0.3s ease-in-out;
+	background-color: transparent;
+	
+}
+.dodungnoichien span img:hover{
+	transform: scale(1.05);
+	position: relative;
+	
+
+}
+.dodungnoichien1 span img{
+	width: 23%;
+	border: 0.5px solid #E2DFDF;
+	border-radius: 6px;
+	margin-right: -1px;
+	outline: none;
+	transition: all 0.3s ease-in-out;
+}
+.dodungnoichien1{
+	position: relative;
+}
+.dodungnoichien1 span img:hover{
+	transform: scale(1.05);
+	position: relative;
+	
+}
+.dodungnoichien1 a{
+	text-decoration: none;
+}
+.dodungnoichien a {
+	text-decoration: none;
+	
+}
+.xemthem{
+	
+	font-size: 40px;
+	position: absolute;
+	top: 90px;
+	right: 10px;
+	cursor: pointer;
+	color: black;
+}
+
+.dodungnoichien1 a.xemthem{
+	position: absolute;
+	bottom: 500px;
+	right: 20px;
+	font-size: 40px;
+	cursor: pointer;
+
+}
+.anhkep img{
+
+	width: 49%;
+	
+}
+.thuonghieu span img{
+	width: 16%;
+	
+	border-radius: 6px;
+	margin-right: -1px;
+	transition: all 0.3s ease-in-out;
+}
+.thuonghieu span img:hover{
+	transform: scale(1.1);
+	transition: all 0.3 ease-in-out
+}
+.container_swap{
+
+width: 100%;
+margin-left:+50px ;
+height: 100px;
+}
+
+.div_left{
+
+width: 250px;
+margin: 20px +20px 0 20px;
+float: left;
+height: 100px;
+text-align: center;
+
+border: 1px solid #C8C7C7 ; 
+border-radius: 5px;
+}
+
+.div_right{
+border: 1px solid #C8C7C7 ; 
+width: 250px;
+margin: 20px +20px 0 20px;
+float: left;
+height: 100px;
+text-align: center;
+border-radius: 5px;
+}
+.div_right1{
+	border: 1px solid #C8C7C7 ; 
+margin: 20px +20px 0 20px;
+width: 250px;
+height: 100px;
+float: left;
+
+text-align: center;
+border-radius: 5px;
+}
+.div_right2{
+	border: 1px solid #C8C7C7 ; 
+margin: 20px +20px 0 20px;
+width: 250px;
+height: 100px;
+float: left;
+
+text-align: center;
+border-radius: 5px;
+}
+.container_swap .div_left:hover{
+	background-color: #a62424;
+	color: white;
+	cursor: pointer;
+}
+.container_swap .div_right1:hover{
+	background-color: #a62424;
+	color: white;
+	cursor: pointer;
+}
+.container_swap .div_right2:hover{
+	background-color: #a62424;
+	color: white;
+	cursor: pointer;
+}
+.container_swap .div_right:hover{
+	background-color: #a62424;
+	color: white;
+	cursor: pointer;
+}
+#back_top{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+	background-color: #a62424;
+	color: white;
+	z-index: 1;
+}
+.khung_search .chondanhmuc #scroll_top:hover{
+	background-color: black ;
+	color: #a62424;
+}
