@@ -15,7 +15,8 @@ hr::before{
 	content: "";
 	position: absolute;
 	background-color: red;
-	height: 1px; width: 100px;
+	height: 1px; width: 90px;
+	
 
 }
 #pages{
@@ -41,6 +42,7 @@ button.dot{
 	transform: scale(1.1);
 	opacity: 80%;
 	transition: all 0.5s ease-in-out;
+	box-shadow: 0 20px 40px 0 #984646;
 }
 .sanphams .item{
 	display: flex;
@@ -55,12 +57,10 @@ button.dot{
 	
 	margin-left: 10px;
 	border-radius: 5px ;
+	
+	
+}
 
-	
-}
-.sanphams .item div:hover{
-	
-}
 .sanphams .item img{
 	height: 170px;
 	width: 120px;

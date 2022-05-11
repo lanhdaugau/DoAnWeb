@@ -9,11 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="styteshowroom.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="D:\Tôi\Các môn học\Web\ĐỒ ÁN\themify-icons\themify-icons.css">
+	<link rel="shortcut icon" href="https://bizweb.dktcdn.net/100/009/443/themes/749376/assets/logo.png?1637374517710">
+	<script src="action.js"></script>
 </head>
 
 <body class="preloading" >
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-	<script type="text/javascript">
+	<script>
 		$(document).ready(function(){
 			$(window).scroll(function(){
 				if($(this).scrollTop()){
@@ -25,7 +27,7 @@
 			});
 			$('#back_top').click(function(){
 				$('html,body').animate({scrollTop: 0},700);
-			});
+			});	
 
 		});
 		$(window).on('load',function(event){
@@ -49,292 +51,568 @@
 				<table>
 					
 					<tr style="height: 10%;">
-						<td class="anhtren">
-							<span><img id="first" src="https://icons.iconarchive.com/icons/double-j-design/apple-festival/16/app-phone-icon.png">Hotline: 0367088853 </span><span style="margin-left: 130px;">
-								<img src="https://icons.iconarchive.com/icons/toma4025/rumax/16/mails-icon.png"> Email: lanhdaugau1605@gmail.com</span> <span style="margin-left: 160px;"> <img src="https://icons.iconarchive.com/icons/icons8/windows-8/16/Network-Ip-Address-icon.png">Địa điểm các cửa hàng </span> <span style="margin-left: 200px;"> <img src="https://icons.iconarchive.com/icons/google/noto-emoji-objects/16/62894-package-icon.png">Theo dõi đơn hàng</span>
-							</td>
+						<div class="anhtren">
+							<span><img  src="https://icons.iconarchive.com/icons/double-j-design/apple-festival/16/app-phone-icon.png">
+								<a href="tel:+0367088853">Hotline: 0367088853</a> </span><span >
+									<img src="https://icons.iconarchive.com/icons/toma4025/rumax/16/mails-icon.png"><a href="mailto:lanhdaugau1605@gmail.com"> Email: lanhdaugau1605@gmail.com</a></span> <span> 
+										<img src="https://icons.iconarchive.com/icons/icons8/windows-8/16/Network-Ip-Address-icon.png">
+										<a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+ngh%E1%BB%87+Th%C3%B4ng+tin+v%C3%A0+Truy%E1%BB%81n+th%C3%B4ng+Vi%E1%BB%87t+-+H%C3%A0n/@15.9750157,108.2510434,17z/data=!3m1!4b1!4m5!3m4!1s0x3142108997dc971f:0x1295cb3d313469c9!8m2!3d15.9750106!4d108.2532374?hl=vi-VN" >Địa điểm các cửa hàng</a> </span> <span >
+											<img src="https://icons.iconarchive.com/icons/google/noto-emoji-objects/16/62894-package-icon.png">Theo dõi đơn hàng</span>
+										</div>
 
-						</tr>
+									</tr>
 
-						<tr>
+									<tr>
 
-							<td>
+										<td>
 
 
-								<br>
-								<!-- khung chứa thanh search -->
-								<div id="khung_search">
-									<div style="margin-left:230px;height: 50px;border-radius: 2px;outline: none;">
-
-										<div class="chondanhmuc">
+											<br>
+											<!-- khung chứa thanh search -->
+											
+											<div class="menu">
+												<div class="menu-item">
+													
+													
+													<div class="drop-down-select">
+														Chọn danh mục
+													</div>
+													<div class="drop-down-list">
+														<div class="drop-down-item">Sản phẩm</div>
+														<div class="drop-down-item">Giỏ hàng</div>
+														<div class="drop-down-item">Tài khoản</div>
+													</div>
+													
+													
+													
+												</div>
+												<div class="menu-item">
+													
+													<form action="" name="formSearch" >
+														<input type="text" name="formName">
+													</form>
+													
+													
+													
+												</div>
+												<div class="menu-item">
+													
+													<button type="submit" onclick="validateForm()">Tìm kiếm</button>
+													
+													
+												</div>
+											</div>
 											
 											
-											<h3 id="scroll_top" >Chọn danh mục &#8250;</h3>
+											<br>
+											<div>
+												<!-- Thanh menu bar -->
+												<div class="topnav" >
+
+													<a  class="active" href="home.html">Trang chủ</a>
+													<a href="sanpham.html">Sản phẩm</a>
+													<a href="#contact">Khuyến mãi</a>
+													<a href="#about">Chăm sóc khách hàng</a>
+
+
+												</div >
 												
-											<div class="chondanhmuc-content">
-												<div><a href="#">Giỏ hàng</a></div>
-												<div><a href="#">Sản phẩm</a></div>
-												<div><a href="#">Tài khoản</a></div>
+												<div class="button-login">
+													<button>Đăng nhập</button>
+													<button>Đăng ký</button>
+												</div>
+												
+												
+												<!-- slide -->
+												<div id="slideshow">
+													<div class="slide-wrapper">
+														<div class="slide"><img  src="http://goldsun.vn/pic/Images/banner-we_637266855051656957.jpg" style="width: 100%;"></div>
+														<div class="slide"><img src="http://goldsun.vn/pic/ProductCate/dung-cu-n_637161494633950698.jpg	" style="width: 100%;"></div>
+														<div class="slide"><img src="http://goldsun.vn/pic/Service/xuatkha_637130727607711977.jpg" style="width: 100%;"></div>
+													</div>
+												</div>
+												<br>
+												<marquee class="chaychu" behavior="alternate">WEBSITE BÁN ĐỒ GIA DỤNG</marquee>	
+												<div class="dodung">
+													<div class="noichiennen">
+														<div class="noichien">
+															<a href="#aa">
+																
+																Nồi chiên
+																
+															</a>
+														</div>
+													</div>
+												</div>
 											</div>
-
-
 											
-										</div>
-										<center style="margin-top: -40px;margin-left: -80px;">
-											
-											<input type="text" name="" style="height: 33px;width: 610px;font-family: Courier New;font-size: 16px;">
-											<button style="background-color: #a62424; border: 1px solid;width: 100px;height: 40px;color: white;cursor: pointer;" type="button">
-												Tìm kiếm
-											</button>
+											<div class="sanpham">
+												<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a-78n.jpg?v=1567473488000');">
+													<div class="overlay-sanpham">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
 
-										</center>
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>
+													</div>
+													
+												</div>
+												<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a-78nd.jpg?v=1567473471000');">
+													<div class="overlay-sanpham">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
 
-									</div>
-									<br>
-									<div>
-										<!-- Thanh menu bar -->
-										<div class="topnav" style="width: 100%;" >
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a70nt.jpg?v=1574299791000');">
+													<div class="overlay-sanpham">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
 
-											<a  class="active" href="home.html">Trang chủ</a>
-											<a href="sanpham.html">Sản phẩm</a>
-											<a href="#contact">Khuyến mãi</a>
-											<a href="#about">Chăm sóc khách hàng</a>
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a70nd-93eb2315-ee25-4ef1-8132-9f0c0ff16ba6.jpg?v=1567473572000');">
+													<div class="overlay-sanpham">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
 
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/i58d.jpg?v=1574299744890');">
+													<div class="overlay-sanpham">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
 
-										</div >
-										
-
-										<div style="text-align: right;">
-
-											<button style="height: 30px;background-color:#a62424 ;color:white ;border: 1px solid;left: -5px;border-radius: 5px;cursor: pointer;width: 100px;" type="button"> Đăng ký</button>
-											<button style="height: 30px;background-color:#a62424 ;color:white;border: 1px solid;border-radius: 5px;cursor: pointer;width: 100px;" type="button"> Đăng nhập</button>
-										</div>
-										<br>
-										<!-- slide -->
-										<div id="slideshow">
-											<div class="slide-wrapper">
-												<div class="slide"><img  src="http://goldsun.vn/pic/Images/banner-we_637266855051656957.jpg" style="width: 100%;"></div>
-												<div class="slide"><img src="http://goldsun.vn/pic/ProductCate/dung-cu-n_637161494633950698.jpg	" style="width: 100%;"></div>
-												<div class="slide"><img src="http://goldsun.vn/pic/Service/xuatkha_637130727607711977.jpg" style="width: 100%;"></div>
-											</div>
-										</div>
-										<br>
-										<marquee class="chaychu" behavior="alternate">WEBSITE BÁN ĐỒ GIA DỤNG</marquee>	
-										<div class="dodung">
-											<div class="noichiennen">
-												<div class="noichien">
-													<a href="#aa">
-														
-														Nồi chiên
-														
-													</a>
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 											<br>
 											<br>
-											<div class="dodungnoichien">
-												
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a-78n.jpg?v=1567473488000"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a-78nd.jpg?v=1567473471000"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a70nt.jpg?v=1574299791000"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a70nd-93eb2315-ee25-4ef1-8132-9f0c0ff16ba6.jpg?v=1567473572000"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/i58d.jpg?v=1574299744890"> </span>
-												<a class="xemthem" href="sanpham.html"> &#10095;</a>
-												<div>
-													<a href="#a">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên chân không Magic Korea A-78New - Màu Trắng
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên chân không Magic Korea A-78New - Màu Đen
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên không dầu Magic Korea A-70New - Màu Trắng
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên không dầu Magic Korea A-70New - Màu Trắng
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên không dầu Iruka I-58 - Màu Đen
-														</div>
-
-													</a>
-												</div>
-												
-												<div class="giatien" style="word-spacing: 150px;margin-left: 70px;">
-													<span>1.400.000vnd</span> <span>1.200.000vnd</span> <span>1.800.000vnd</span> <span>2.200.000vnd</span> <span>3.200.000vnd </span>
-												</div>
-											</div>
-										</div>
-										<br>
-										<br>
-										<div class="anh1" style="margin-left: +10px;">
-											<div><img style="width: 1240px;" src="https://bizweb.dktcdn.net/100/009/443/themes/749376/assets/banner_full_width.png?1637374517710"></div>
-											
-										</div>
-										<br>
-										<div class="dodung">
-											<div class="noichiennen">
-												<div class="noichien">
-													<a href="#aa">
-														Nồi cơm điện
-													</a>
-												</div>
-											</div>
-											<br>
-											<br>
-											<div class="dodungnoichien">
-												
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/1-a271121a-f74c-40df-9f4b-6c4c324829fd.jpg?v=1544546311000"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/1-0cbaae89-95e1-4877-9bfa-5a4d476c1943.png?v=1602829725000"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a-510.png?v=1575250924000"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a511-1.jpg?v=1578014650000"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/noi-com-dien-long-nieu-magic-a-87-1.jpg?v=1582086125000"> </span>
-												<a class="xemthem" href="sanpham2.html"> &#10095;</a>
-												<div>
-													<a href="#a">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên chân không Magic Korea A-78New - Màu Trắng
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên chân không Magic Korea A-78New - Màu Đen
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên không dầu Magic Korea A-70New - Màu Trắng
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên không dầu Magic Korea A-70New - Màu Trắng
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 19%;text-align: center;display: inline-block;"> 
-															Nồi chiên không dầu Iruka I-58 - Màu Đen
-														</div>
-
-													</a>
-												</div>
-												
-												<div class="giatien" style="word-spacing: 150px;margin-left: 70px;">
-													<span>1.400.000vnd</span> <span>1.200.000vnd</span> <span>1.800.000vnd</span> <span>2.200.000vnd</span> <span>3.200.000vnd </span>
-												</div>
-											</div>
-										</div>
-										<br>
-										<br>
-										<div class="anhkep">
-											<center>
-												<a href=""><img src="https://bizweb.dktcdn.net/100/009/443/themes/749376/assets/banner_5two_1.png?1637374517710"></a>
-												<a href=""><img src="https://bizweb.dktcdn.net/100/009/443/themes/749376/assets/banner_5two_2.png?1637374517710"></a>
-											</center>
-											
-										</div>
-										<br>
-										<div class="dodung">
-											<div class="noichiennen">
-												<div class="noichien">
-													<a href="#aa">
-														Bếp điện
-													</a>
-												</div>
-											</div>
-											<div class="dodungnoichien1">
-												
-												<span><img  src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/bep-dien-tu-magic-eco-ac-220-111.png?v=1590632878000"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/1-54f520d0-8a42-4b4f-81e2-568ff6135750.jpg?v=1605750697660"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/1-de5bcce2-efbe-4066-9131-9504af52826b.jpg?v=1561345784683"> </span>
-												<span><img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/i22-1000x1000px-01.jpg?v=1605947618000g"> </span>
-												
-												<a class="xemthem" href="sanpham3.html">&#10095;</a>
-												<div>
-													<a href="#a">
-														<div style="width: 24%;text-align: center;display: inline-block;"> 
-															Bếp từ Cata IB 2 Plus BK
-
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 24%;text-align: center;display: inline-block;"> 
-															Bếp từ đôi cao cấp KALITE KL3900
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 24%;text-align: center;display: inline-block;"> 
-															Bếp điện từ Bauer BE 62SE
-														</div>
-													</a>
-													<a href="">
-														<div style="width: 24%;text-align: center;display: inline-block;"> 
-															Bếp từ điện từ Canzy CZ 702MIX
-														</div>
-													</a>
+											<div class="anh1" style="margin-left: +10px;">
+												<div><img style="width: 1240px;" src="https://bizweb.dktcdn.net/100/009/443/themes/749376/assets/banner_full_width.png?1637374517710">
+													
 													
 												</div>
 												
-												<div style="word-spacing:220px;margin-left: 80px;">
-													<span>1.400.000vnd</span> <span>1.200.000vnd</span> <span>1.800.000vnd</span> <span>2.200.000vnd</span> 
+											</div>
+											<br>
+											<div class="dodung">
+												<div class="noichiennen">
+													<div class="noichien">
+														<a href="sanpham2.html">
+															Nồi cơm điện
+														</a>
+													</div>
 												</div>
-											</div>
-										</div>
-										<br>
-										<div class="slideshow-container">
-											<div class="mySlides fade">
-												<div class="numbertext">1 / 3</div>
-												<img src="http://goldsun.vn/pic/Images/san-pham-_637131419009966466.jpg" style="width:100%">
+												<div class="sanpham">
+													<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/1-a271121a-f74c-40df-9f4b-6c4c324829fd.jpg?v=1544546311000');">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
+
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/1-0cbaae89-95e1-4877-9bfa-5a4d476c1943.png?v=1602829725000');">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
+
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>	
+													</div>
+													<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a-510.png?v=1575250924000');">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
+
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>	
+													</div>
+													<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a511-1.jpg?v=1578014650000');">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
+																
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>		
+													</div>
+													<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/noi-com-dien-long-nieu-magic-a-87-1.jpg?v=1582086125000');">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
+																
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>	
+													</div>
+												</div>
 												
 											</div>
-
-											<div class="mySlides fade">
-												<div class="numbertext">2 / 3</div>
-												<img src="http://goldsun.vn/pic/Images/Slide_637130725443804757.jpg" style="width:100%">
+											<br>
+											<br>
+											<div class="anhkep">
+												<center>
+													<a href=""><img src="https://bizweb.dktcdn.net/100/009/443/themes/749376/assets/banner_5two_1.png?1637374517710"></a>
+													<a href=""><img src="https://bizweb.dktcdn.net/100/009/443/themes/749376/assets/banner_5two_2.png?1637374517710"></a>
+												</center>
 												
 											</div>
-
-											<div class="mySlides fade">
-												<div class="numbertext">3 / 3</div>
-												<img src="http://goldsun.vn/pic/ProductCate/thiet-bi-_637160882463804420.jpg" style="width:100%">
+											<br>
+											<div class="dodung">
+												<div class="noichiennen">
+													<div class="noichien">
+														<a href="#aa">
+															Bếp điện
+														</a>
+													</div>
+												</div>
 												
 											</div>
+											<div class="sanpham1">
+												<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/bep-dien-tu-magic-eco-ac-220-111.png?v=1590632878000');">
+													<div class="overlay-sanpham">
+														<div class="content-in-sanpham">
 
-										</div>
-										<br>
+															Nồi chiên không dầu
+															<br>
+															Giá 2 củ
+														</div>
+														<div class="hover-search">
+															<div class="tooltip">
+																Xem thêm
+																<div class="arrow down"></div>
+															</div>
+															<div class="search">
+																<i class="fa fa-search" title="xem thêm"></i>
+															</div>
+														</div>
+														
+														<div class="cart">
+															<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																<span><span class="fa fa-shopping-basket"></span></span>
+																Giỏ hàng
+															</button>
+														</div>
+													</div>	</div>
+													<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/1-54f520d0-8a42-4b4f-81e2-568ff6135750.jpg?v=1605750697660');">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
 
-										<div style="text-align:center">
-											<span class="dot"></span> 
-											<span class="dot"></span> 
-											<span class="dot"></span> 
-										</div>
-										<script>
-											let slideIndex = 0;
-											showSlides();
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>	
+													</div>
+													<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/1-de5bcce2-efbe-4066-9131-9504af52826b.jpg?v=1561345784683');">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
 
-											function showSlides() {
-												let i;
-												let slides = document.getElementsByClassName("mySlides");
-												let dots = document.getElementsByClassName("dot");
-												for (i = 0; i < slides.length; i++) {
-													slides[i].style.display = "none";  
-												}
-												slideIndex++;
-												if (slideIndex > slides.length) {slideIndex = 1}    
-													for (i = 0; i < dots.length; i++) {
-														dots[i].className = dots[i].className.replace(" active", "");
-													}
-													slides[slideIndex-1].style.display = "block";  
-													dots[slideIndex-1].className += " active";
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>	
+													</div>
+													<div class="bg-sanpham" style="background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/i22-1000x1000px-01.jpg?v=1605947618000g');">
+														<div class="overlay-sanpham">
+															<div class="content-in-sanpham">
+
+																Nồi chiên không dầu
+																<br>
+																Giá 2 củ
+															</div>
+															<div class="hover-search">
+																<div class="tooltip">
+																	Xem thêm
+																	<div class="arrow down"></div>
+																</div>
+																<div class="search">
+																	<i class="fa fa-search" title="xem thêm"></i>
+																</div>
+															</div>
+															
+															<div class="cart">
+																<button class=" cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
+																	<span><span class="fa fa-shopping-basket"></span></span>
+																	Giỏ hàng
+																</button>
+															</div>
+														</div>	</div>
+														
+													</div>
+													<br>
+													<br>
+													<div class="slideshow-container">
+														<div class="mySlides fade">
+															<div class="numbertext">1 / 3</div>
+															<img src="http://goldsun.vn/pic/Images/san-pham-_637131419009966466.jpg" style="width:100%">
+															
+														</div>
+
+														<div class="mySlides fade">
+															<div class="numbertext">2 / 3</div>
+															<img src="http://goldsun.vn/pic/Images/Slide_637130725443804757.jpg" style="width:100%">
+															
+														</div>
+
+														<div class="mySlides fade">
+															<div class="numbertext">3 / 3</div>
+															<img src="http://goldsun.vn/pic/ProductCate/thiet-bi-_637160882463804420.jpg" style="width:100%">
+															
+														</div>
+
+													</div>
+													<br>
+
+													<div style="text-align:center">
+														<span class="dot"></span> 
+														<span class="dot"></span> 
+														<span class="dot"></span> 
+													</div>
+													<script>
+														let slideIndex = 0;
+														showSlides();
+
+														function showSlides() {
+															let i;
+															let slides = document.getElementsByClassName("mySlides");
+															let dots = document.getElementsByClassName("dot");
+															for (i = 0; i < slides.length; i++) {
+																slides[i].style.display = "none";  
+															}
+															slideIndex++;
+															if (slideIndex > slides.length) {slideIndex = 1}    
+																for (i = 0; i < dots.length; i++) {
+																	dots[i].className = dots[i].className.replace(" active", "");
+																}
+																slides[slideIndex-1].style.display = "block";  
+																dots[slideIndex-1].className += " active";
  													 setTimeout(showSlides, 2000); // Change image every 2 seconds
  													}
  												</script>

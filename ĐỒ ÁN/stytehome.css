@@ -38,69 +38,17 @@ body{
 
 input:focus {
         outline:none;
-    }
+  }
 .div_tren{
 	height: 100%;
 	width: 50px;
 	background-color: grey;
 }
-.chondanhmuc {
-  position: relative;
-  left: -45px;
-  text-align: center;
-  width: 160px;
-  height: 37px;
-  list-style: none;
-  border: 1px solid #6D6A6A;
-  
-  cursor: pointer;
-}
-.chondanhmuc   h3{
-  margin-top: 5px;
-  font-weight: !important;
-  color: #615E5E;
-}
 
-.chondanhmuc .chondanhmuc-content{
-  width: 160px;
-  list-style: none;
-  border: 1px solid;
-  line-height: 50px;
-  text-decoration: none;
-  position: absolute;
-  display: none;
-  background-color: whitesmoke;
-  margin-top: 10px;
-  z-index: 1;
-}
-.chondanhmuc .chondanhmuc-content div{
-  
-  border-bottom: 1px solid;
-}
-.chondanhmuc .chondanhmuc-content div:last-child{
-  border-bottom: none;
-}
-.chondanhmuc .chondanhmuc-content div:hover{
-  background-color: #D1D1D1;
-}
-.chondanhmuc:hover .chondanhmuc-content{
-
-  display: block;
-}
-.chondanhmuc .chondanhmuc-content div a{
-  color: black;
-  font-size: 17 px;
-  text-decoration: none;
-}
 .menudanhmucsanpham{
   position: relative;
 }
-#khung_search{
-	height: 100px;
-	width: 100%;
-	
 
-}
 #thanh_search{
 	border: 1px solid;
 	opacity: 50%;
@@ -244,21 +192,182 @@ img.a{
 .anh1 div:hover img{
 
   transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.anhkep center{
-  max-width:1200px;
-  overflow: hidden;
-}
-.anhkep center a img{
-  max-width: 100%;
-  padding-right: 10px;
-}
+
 .anhkep center a:hover img{
   transform: scale(1.05);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.anhtren{
+  width: 100%;
 }
 .anhtren span{
   vertical-align: text-top;
+  padding-right: 170px;
+  
+}
+.anhtren a{
+  text-decoration: none;
+  color: #000;
+}
+.anhtren span:last-child{
+  padding-right: 0;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+ 
+}
+.menu .menu-item{
+ margin-right: 2%;
+  
+ 
+}
+.menu .menu-item:nth-child(1){
+  border: 2px solid #000;
+  height: 35px;
+  width: 10%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.menu .menu-item:nth-child(2){
+  border: none;
+ 
+ 
+}
+.menu .menu-item:nth-child(3) button{
+  margin-top: 1px;
+  background-color: #a62424;
+  border: white;
+  color: white;
+  border-radius: 5px;
+}
+.menu .menu-item input{
+  width: 600px;
+  height: 33px;
+  border-width: 1px solid;
+  border-radius: 5px;
+
+  
+}
+.menu .menu-item button{
+  width: 150px;
+  height: 35px;
+}
+.drop-down-select{
+  cursor: pointer;
+  transform: translateY(50%);
+  width: 100%;
+}
+.drop-down-list{
+  margin-top: 17px;
+  cursor: pointer;
+  z-index: 2;
+}
+.drop-down-list .drop-down-item{
+  border: 1px solid #000;
+  height: 35px;
+  border-bottom: none;
+  background-color: #717171;
+  padding-top: 10px;
+
+}
+.drop-down-list{
+
+  display: none;
+  z-index: 1; 
+  
+}
+.menu-item:nth-child(1):hover{
+  border-radius: 5px 5px 0 0;
+}
+.menu-item:nth-child(1):hover .drop-down-list{
+  display: block;
+ 
+}
+.drop-down-item:last-child{
+  border-bottom: 1px solid;
+  border-radius:0 0 5px 5px;
+}
+.drop-down-item:hover{
+  background-color: #bbb;
+}
+.button-login{
+  width: 100%;
+  height: 35px;
+  padding:10px 0 0px 0;
+  
+
+}
+.button-login button{
+  float: right;
+  margin-right: 10px;
+  height: 25px;
+  background-color: #a62424;
+ border: #a62424;
+ color: white;
+ border-radius: 5px;
+ padding: 0 +5px;
+
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a62424; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #717171; 
+}
+@media only screen and (max-width:800px){
+  .menu{
+    width: 700px;
+  }
+  .menu .menu-item input{
+    width: 150px;
+  }
+  .drop-down-select{
+    margin-top: -18px;
+  }
+  .button-login{
+    margin-left: -600px;
+  }
+  .anh1{
+    width: 60%;
+  }
+  .slideshow-container{
+    display: none;
+  }
+  .anhnensp{
+    display: none;
+  }
+  .anhkep{
+    width: 60%;
+  }
+}
+.overlay-sanpham{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 243, 243, 0.3);
+  display:none; 
+  border-radius: 10px;
+}
+.bg-sanpham:hover .overlay-sanpham{
+  display: block;
+  transition: all 0.3 ease-in-out;
 }
