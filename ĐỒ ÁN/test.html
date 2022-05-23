@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+    <head>
+        <title>Font Awesome 5 Icons</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!--Get your own code at fontawesome.com-->
+    </head>
+    <script>
+    function change(id){
+        // const main =$(element).parent("#main");
 
-.alo img{
-  width: 150px;
-  height: auto;
-  opacity: 0;
-  padding: 0 auto;
-}
-.blo:hover .alo img{
-  opacity: 1;
-  transition: all 0.6s ease-in-out;
-}
-</style>
-</head>
-<body>
+        const main= document.getElementById(id).nodeValue;
+      
+       alert(main);
+     
+       
+       
+    
+       
+    }
+    function alo(){
+        
+        alert( $('#haha').text()*3);
 
-<div class="blo" style="height:450px;width: 250px;background-image: url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a-78n.jpg?v=1567473488000');">
-<span class="alo">
-  <img src="https://icons.iconarchive.com/icons/double-j-design/apple-festival/16/app-phone-icon.png" alt="">
-</span>
-</div>
+    }
+    jQuery(function($) {
+  $('#mirror').text($('#alice').val());
 
+  $('#alice').on('input', function() {
+      
+    $('#mirror').text($('#alice').val()*$(".alo").text());
+  });
+});
+</script>
+    <body>
+        <!-- <form action="index.php" method="post">
+            <input type="text" name="tieu_de">
+            <br>
+            <br>
+            <textarea name="noi_dung" id="" cols="30" rows="10"></textarea>
+            <button> Thêm</button>
+        </form> -->
+        <div class="alo">
+            400
+        </div>
+        <input id="alice" type="number" step="any" value="99">
 
-</body>
-</html> 
+        <p id="mirror"></p>
+    </body>
+</html>

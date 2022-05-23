@@ -4,14 +4,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sản phẩm trang 1</title>
-	<link rel="stylesheet" type="text/css" href="stytehome.css">
-	<link rel="stylesheet" type="text/css" href="stytedodung.css">
-	<link rel="stylesheet" type="text/css" href="stytesanpham.css">
-	<link rel="stylesheet" type="text/css" href="styteshowroom.css">
+	<link rel="stylesheet" type="text/css" href="stylehome.css">
+	<link rel="stylesheet" type="text/css" href="styledodung.css">
+	<link rel="stylesheet" type="text/css" href="stylesanpham.css">
+	<link rel="stylesheet" type="text/css" href="styleshowroom.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="D:\Tôi\Các môn học\Web\ĐỒ ÁN\themify-icons\themify-icons.css">
-
-
+	<link rel="shortcut icon"
+			href="icon.jpg">
+	<script src="action.js"></script>
 </head>
 <body class="preloading">
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -47,6 +48,12 @@
 	<div id="back_top" style="z-index: 1;">
 			<i class="fas fa-chevron-up"></i>
 		</div>
+		<div class="cart-shortcut" >
+			<i class="fa fa-cart-arrow-down"></i>
+			<div class="after">
+				0
+			</div>
+		</div>
 												
 		<div class="anhtren">
 			<span><img  src="https://icons.iconarchive.com/icons/double-j-design/apple-festival/16/app-phone-icon.png">
@@ -65,9 +72,9 @@
 						Chọn danh mục
 					</div>
 					<div class="drop-down-list">
-						<div class="drop-down-item">Sản phẩm</div>
+						<div class="drop-down-item" onclick="window.open('purchase.html','_self')">Sản phẩm</div>
 						<div class="drop-down-item">Giỏ hàng</div>
-						<div class="drop-down-item">Tài khoản</div>
+						<div class="drop-down-item" onclick="window.open('account.html','_self')">Tài khoản</div>
 					</div>
 			
 				
@@ -95,11 +102,11 @@
 		</div >
 		<br>
 		<div class="timkiem">
-			<div style="float: left; width: 5%;display: block;background-color:">
+			<div style="float: left; width: 5%;display: block;">
 
 				<span style="visibility: hidden;"> dd</span>
 			</div>
-			<div style="float:left; width: 25%;display: block;">
+			<div class="search-with">
 				<span style="font-size: 20px;">
 					Tìm theo :
 				</span>
@@ -314,7 +321,7 @@
 											</ul>
 										</div>
 									</aside>
-									<img class="anhnensp" src="https://bizweb.dktcdn.net/100/009/443/themes/749376/assets/banner_sidebar_collection.png?1637374517710">
+									<img id="anh_loc"  src="https://bizweb.dktcdn.net/100/009/443/themes/749376/assets/banner_sidebar_collection.png?1637374517710">
 								</div>
 
 								<div class="sanphams" style="width: 65%;" >
@@ -326,7 +333,7 @@
 											 <br>
 										</div>
 										<div class="item">
-											<div>
+											<div class="item-content" onclick="addPurchase()">
 												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/ni-chi-1.png?v=1637823141000">
 												<p>Nồi chiên không dầu Magic Eco AC-112</p>
 												
@@ -335,35 +342,25 @@
 
 
 											</div>
-											<div >
+											<div class="item-content" onclick="addPurchase()">
 												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/noi-chien-ket-hop-hap-cao-cap-magic-eco-s12-d49721fe-4068-4821-a3bd-4f9572c4af0a.jpg?v=1638865479000">
 												
 												<p>Nồi chiên không dầu kết hợp Magic Eco S12 12 lít</p>
 												<span>4.000.000vnd</span>
 											</div>
-											<div>
+											<div class="item-content" onclick="addPurchase()">
 												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a802-1.jpg?v=1575250702000">
 												
 												<p>Nồi chiên không dầu hấp cao cấp Magic Eco S07 Pro 7 </p>
 											<span>4.000.000vnd</span>
 
 											</div>
-											<div>
-												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/mg-2965-01.png?v=1608358733000">
-												<p>
-													Nồi chiên không dầu kết hợp Magic Eco M12
-												</p>
-												<br>
-												
-												<span>4.000.000vnd</span>
-												
-
-											</div>
+											
 										</div>
 										<br>
 										<br>
 										<div class="item">
-											<div>
+											<div class="item-content" onclick="addPurchase()">
 												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/noi-chien-magic-eco-ac-102-01.png?v=1610188909000">
 												<p>Nồi chiên không dầu Magic Eco AC-112</p>
 												
@@ -372,35 +369,25 @@
 
 
 											</div>
-											<div >
+											<div class="item-content" onclick="addPurchase()">
 												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/noi-chien-khong-dau-ket-hop-hap-magic-korea-a-700-2.jpg?v=1638848566000">
 												
 												<p>Nồi chiên không dầu kết hợp Magic Eco S12 12 lít</p>
 												<span>4.000.000vnd</span>
 											</div>
-											<div>
+											<div class="item-content" onclick="addPurchase()">
 												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/noi-chien-khong-dau-ket-hop-lo-nuong-magic-eco-m12-600x600.jpg?v=1637375645000">
 												
 												<p>Nồi chiên không dầu hấp cao cấp Magic Eco S07 Pro 7 </p>
 											<span>4.000.000vnd</span>
 
 											</div>
-											<div>
-												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/noi-chien-magic-eco-ac-101-01.png?v=1610188709000">
-												<p>
-													Nồi chiên không dầu kết hợp Magic Eco M12
-												</p>
-												<br>
-												
-												<span>4.000.000vnd</span>
-												
-
-											</div>
+											
 										</div>
 										<br>
 										<br>
 										<div class="item">
-											<div>
+											<div class="item-content" onclick="addPurchase()">
 												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/9-4d1a778d-6590-4f16-be09-afd467afc161-0ea90297-4c56-4c58-984e-6858c50cced9.jpg?v=1601878683000">
 												<p>Nồi chiên không dầu Magic Eco AC-112</p>
 												
@@ -409,30 +396,20 @@
 
 
 											</div>
-											<div >
+											<div class="item-content" onclick="addPurchase()">
 												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a801-1-d2228def-41d2-4b1f-9587-2b6f57e7e7d1.jpg?v=1601878462000">
 												
 												<p>Nồi chiên không dầu kết hợp Magic Eco S12 12 lít</p>
 												<span>4.000.000vnd</span>
 											</div>
-											<div>
+											<div class="item-content" onclick="addPurchase()">
 												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a801d-1-3dd47e12-bff1-4942-88fb-adeb52905855.jpg?v=1601878495000">
 												
 												<p>Nồi chiên không dầu hấp cao cấp Magic Eco S07 Pro 7 </p>
 											<span>4.000.000vnd</span>
 
 											</div>
-											<div>
-												<img src="https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a-78nd-0224099d-dd37-453c-9b51-861b6829ba58-1df9d46e-c003-4a14-8511-9d81c2b929d2.jpg?v=1601878415000">
-												<p>
-													Nồi chiên không dầu kết hợp Magic Eco M12
-												</p>
-												<br>
-												
-												<span>4.000.000vnd</span>
-												
-
-											</div>
+											
 										</div>
 										<br>
 										<br>
@@ -444,43 +421,44 @@
 											
 											
 										</div>
-								<div style="float: left; width: 5%;display: block;">
-									<span style="visibility: hidden;"> dd</span>
-
-
-								</div>
+								
 
 							</div>
-							<br>
-							<br>
-							<br>
-							<br>
-							<div >
+							
+							<div style="margin-top: 10%;" >
 								<div class="showroomnen">
 
  													
- 													<div class="div_trai">
- 														<div class="vientrenshowroom"><h2>Địa chỉ miền Nam</h2></div>
- 														<div class="showroom-content">
- 															1. Showroom Trung Sơn: Số 233A – 235 – 237 Đường 9A, KDC Trung Sơn, Ấp 4, Bình Hưng, Bình <br>Chánh, Tp. HCM<br><br>
-
- 															2. Big C Trường Chinh: Tầng 2, Big C Trường Chinh, Số 1 Trường Chinh, Tây Thạnh, Tân Phú,<br> Tp. HCM<br><br>
-
- 															3. Điện Máy Chợ Lớn quận 4: Chung cư H2, 196 Hoàng Diệu, Phường 8, Quận 4, Tp. HCM<br>
- 															
- 														</div>
- 													</div>
-
- 													<div class="div_phai">
- 														<div class="vientrenshowroom"><h2>Địa chỉ miền Bắc</h2></div>
- 														<div class="showroom-content">
- 															1. Showoom Hà Nội (Tầng 1): Số 109 Trung Hòa, Cầu Giấy, Hà Nội
- 															<br><br>
- 															2. Big C Thăng Long (Tầng 2): Số 222 Trần Duy Hưng - Cầu Giấy - Hà Nội
- 															<br><br>
- 															3. Siêu Thị Pico Nguyễn Trãi (Tầng 2): Số 76 Nguyễn Trãi, Thanh Xuân, Hà Nội
- 														</div>
- 													</div>
+									<div class="showroom-address">
+										<div class="item-address">
+											<div class="vientrenshowroom"><h2>Địa chỉ miền Nam</h2></div>
+											<div class="showroom-content">
+												1. Showroom Trung Sơn: Số 233A – 235 – 237 Đường 9A, KDC Trung Sơn,
+												Ấp 4, Bình Hưng, Bình <br>Chánh, Tp. HCM<br><br>
+	
+												2. Big C Trường Chinh: Tầng 2, Big C Trường Chinh, Số 1 Trường Chinh,
+												Tây Thạnh, Tân Phú,<br> Tp. HCM<br><br>
+	
+												3. Điện Máy Chợ Lớn quận 4: Chung cư H2, 196 Hoàng Diệu, Phường 8,
+												Quận 4, Tp. HCM<br>
+	
+											</div>
+										</div>
+										<br>
+										<div class="item-address">
+											<div class="vientrenshowroom"><h2>Địa chỉ miền Bắc</h2></div>
+											<div class="showroom-content">
+												1. Showoom Hà Nội (Tầng 1): Số 109 Trung Hòa, Cầu Giấy, Hà Nội
+												<br><br>
+												2. Big C Thăng Long (Tầng 2): Số 222 Trần Duy Hưng - Cầu Giấy - Hà
+												Nội
+												<br><br>
+												3. Siêu Thị Pico Nguyễn Trãi (Tầng 2): Số 76 Nguyễn Trãi, Thanh Xuân,
+												Hà Nội
+											</div>
+										</div>
+									</div>
+									
  													<div class="div_thong_tin">
  														<span style="font-size: 25px;font-weight: bold;"> Thông tin</span>
  														<br>
@@ -527,8 +505,8 @@
  														<br>
  														<div style="width:300px;height: 50px;background-color: white;">
  															<div>
- 																<div style="width:35px;height:35px;border: 1px solid;padding: 10px 0 0px 10px;">
-
+ 																<div class="logo">
+																	<img src="icon.jpg" alt="">
  																</div>
  																<div style="float: left; margin-left: 45px;margin-top: -45px;">
  																	<a style="padding-left: 10px;text-decoration: none;color: #899DCF;" href="https://www.facebook.com/lanh.justlanh/">CÔNG TY BÁN ĐỒ GIA DỤNG</a>
