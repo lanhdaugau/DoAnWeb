@@ -8,6 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="styledodung.css">
 		<link rel="stylesheet" type="text/css" href="styleshowroom.css">
 		<link rel="stylesheet" type="text/css" href="detail.css">
+
+		<!-- add library to add icon -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
 			rel="stylesheet">
 		<link rel="shortcut icon"
@@ -20,8 +22,11 @@
 
 	<body class="preloading">
 		<script src="https://code.jquery.com/jquery-3.6.0.js"
-			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous">
+		</script>
+		
 		<script>
+		// bắt sự kiện scroll xuống chuột để hiện ra để scroll về trước
 		$(document).ready(function(){
 			$(window).scroll(function(){
 				if($(this).scrollTop()){
@@ -36,19 +41,21 @@
 			});	
 
 		});
+		// file gif loading trước khi vào trang
 		$(window).on('load',function(){
   $('body').removeClass('preloading');
   $('.load').delay(700).fadeOut('fast');
 });
 		
 	</script>
+	<!-- ảnh gif  -->
 		<div class="load">
 			<img src="./sample.gif">
 			<p>Vui lòng đợi..</p>
 
 		</div>
 		<table style="height: 100%; width: 100%;">
-
+			<!-- button scroll top -->
 			<div id="back_top">
 				<i class="fas fa-chevron-up"></i>
 				
@@ -65,6 +72,7 @@
 					<table>
 
 						<tr style="height: 10%;">
+							<!-- các thông tin liên hệ trên cùng -->
 							<div class="anhtren">
 								<span><img
 										src="https://icons.iconarchive.com/icons/double-j-design/apple-festival/16/app-phone-icon.png">
@@ -96,7 +104,7 @@
 								<div class="menu">
 									<div class="menu-item">
 
-
+											<!-- tạo ra danh sách hiển thị khi hover vào  -->
 										<div class="drop-down-select">
 											Chọn danh mục
 										</div>
@@ -109,6 +117,7 @@
 
 
 									</div>
+									<!-- tìm kiếm -->
 									<div class="menu-item">
 
 										<form action="index.php" name="formSearch" method="post">
@@ -119,6 +128,7 @@
 
 
 									</div>
+									<!-- nút tìm kiếm -->
 									<div class="menu-item">
 
 										<button type="submit" onclick="validateForm()">Tìm kiếm</button>
@@ -141,8 +151,12 @@
 									</div>
 
 									<div class="button-login">
-										<button id="login">Đăng nhập</button>
-										<button>Đăng ký</button>
+										<form action="dangnhap.php" method="post">
+											<button id="login" >Đăng nhập</button>
+										</form>
+										<form action="dangky.php" method="post">
+										<button type="submit" > Đăng ký</button>
+										</form>
 									</div>
 
 
@@ -163,6 +177,7 @@
 									</div>
 									<br>
 									<marquee class="chaychu" behavior="alternate">WEBSITE BÁN ĐỒ GIA DỤNG</marquee>
+									<!-- tên loại hàng -->
 									<div class="dodung">
 										<div class="noichiennen">
 											<div class="noichien">
@@ -177,6 +192,7 @@
 								</div>
 
 								<div class="sanpham">
+									<!-- sản phẩm -->
 									<div id="sp1" class="bg-sanpham" style="background-image:
 										url('https://bizweb.dktcdn.net/thumb/grande/100/009/443/products/a-78n.jpg?v=1567473488000');">
 										<div class="content-in-sanpham">
@@ -966,7 +982,7 @@
 												</div>	
 												<div style="float: left; margin-left: 45px;margin-top: -45px;">
 													<a style="padding-left: 10px;text-decoration: none;color: #899DCF;"
-														href="https://www.facebook.com/lanh.justlanh/">CÔNG TY BÁN ĐỒ GIA
+														href="https://www.facebook.com/lanh.justlanh/" target="_blank">CÔNG TY BÁN ĐỒ GIA
 														DỤNG</a>
 													<div style="margin-left: +8px;padding-top: -2px;">
 														<button>

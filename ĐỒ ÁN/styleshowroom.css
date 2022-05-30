@@ -130,7 +130,7 @@
 	width: 20vw;
 	border: 1px solid rgb(201, 201, 201);
 	text-align: center;
-	height: 15vh;
+	height:80px;
 	border-radius: 5px;
 }
 .swap-content .item-swap-content:first-child{
@@ -140,9 +140,10 @@
 }
 .swap-content .item-swap-content:last-child{
 	padding-top: 5%;
+	font-size: 1vw;
 }
 .swap-content .item-swap-content:last-child p{
-	font-size: 20px;
+	font-size: 1.5vw;
 	font-weight: bold;
 }
 .swap-content:hover{

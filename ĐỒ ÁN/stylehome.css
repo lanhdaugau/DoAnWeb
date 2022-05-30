@@ -385,7 +385,7 @@ img.a{
   
   }
   
-  
+
   @-webkit-keyframes slide {
       20% {margin-left: 0px;}
      30% {margin-left: -700px;}
@@ -420,6 +420,9 @@ img.a{
   .search-with{
     display: none;
   
+  }
+  .div_fanpage{
+    display: none;
   }
   
 }

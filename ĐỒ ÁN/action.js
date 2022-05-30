@@ -19,6 +19,7 @@ function validateForm() {
     alert("Sản phẩm bạn tìm kiếm không có!!");
   }
   
+
 }
 
 function closeProduct() {
@@ -122,5 +123,4 @@ function more(){
   quantity++;
   $('.cart-shortcut .after').text(quantity);
 }
-
 
