@@ -59,19 +59,24 @@
     $email_get = $_POST['email'];
     if (empty($email_get)) {
         header('location:enter-email.php?error=Email không được bỏ trống');
+        exit();
     }
     
    
     $ketnoi=mysqli_connect('localhost','root','','account');
     mysqli_set_charset($ketnoi,'utf-8');
-    $sql="select * from infortmation";
+    $sql="select * from information";
     $result= mysqli_query($ketnoi,$sql);
     $check=false;
-    foreach ($sesult as $key) {
-        if($result['email']==$email_get){
+    foreach ($result as $key) {
+       
+        if(trim($key['email'])== trim($email_get)){
+           
             $check=true;
+            
         }
     }
+
     if(!$check){
         header('location:enter-email.php?error=Email của bạn chưa được đăng kí');
         exit();

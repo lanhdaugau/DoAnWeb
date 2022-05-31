@@ -61,11 +61,13 @@
         $sql="select * from information";
         $result=mysqli_query($ketnoi,$sql);
         foreach ($result as $key ) {
-            if($key['user']==$user){
+            if(trim($key['user'])==trim($user)){
                 header('location:dangky.php?error=Tên tài khoản của bạn đã được sử dụng');
+                exit();
             }
-            if($key['email']==$email_get){
+            if(trim($key['email'])==trim($email_get)){
                 header('location:dangky.php?error=Email của bạn đã được sử dụng');
+                exit();
             }
         }
         mysqli_close($ketnoi);
