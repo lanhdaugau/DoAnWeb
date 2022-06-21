@@ -26,7 +26,7 @@ hr::before{
 }
 #pages{
 	position: relative;
-	left: 90%;
+	left: 50%;
 	
 }
 button.dot{
@@ -42,7 +42,7 @@ button.dot{
 	background-color: #a62424;
 	color: white;
 }
-.item div:hover{
+.item .item-content:hover{
 	transform: scale(1.1);
 	opacity: 80%;
 	transition: all 0.5s ease-in-out;
@@ -53,7 +53,7 @@ button.dot{
 	padding: 0;
 	flex-wrap: nowrap;
 }
-.sanphams .item div{
+.sanphams .item .item-content{
 	
 	text-align: center;
 	font-size: 20px;
@@ -64,24 +64,25 @@ button.dot{
 	border-radius: 5px ;
 	
 	margin-right: 10%;
-	height: 47vh;
+	height: 280px;
+	
 }
-.sanphams .item div:last-child{
+.sanphams .item .item-content:last-child{
 	margin-right: 0;
 }
 
 .sanphams .item img{
-	height: 25vh;
+	height: 12vw;
 	width: 12vw;
 	
 	
 }
-.item div span{
+.item .item-content span{
 	color: #a62424;
 	font-style: italic;
 	
 }
-.item div p{
+.item .item-content p{
 		
 }
 .item-content{
@@ -89,7 +90,22 @@ button.dot{
 }
 @media only screen and  (max-width:800px){
 	.item .item-content span{
-		display: none;
+		font-size: small;
 
+	}
+	.item .item-content p{
+		font-size: small;
+	}
+	.sanphams .item .item-content{
+		height: auto;
+	}
+	.sanphams .item {
+		margin-left: 20px;
+	}
+	#pages{
+		margin-left: 20%;
+	}
+	.search-with{
+		display: none;
 	}
 }
