@@ -176,11 +176,12 @@ td{
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
+
 img.a{
   vertical-align: sub;
+}
+.anh1{
+  margin-left: +20px;
 }
 .anh1 div{
   max-width: 1240px;
@@ -266,7 +267,7 @@ img.a{
 .drop-down-list{
   margin-top: 17px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1000;
 }
 .drop-down-list .drop-down-item{
   border: 1px solid #000;
@@ -358,6 +359,9 @@ img.a{
   }
   .anhkep{
     width: 60%;
+  }
+  .anh1{
+    transform: translateX(-5%);
   }
 }
 .overlay-sanpham{

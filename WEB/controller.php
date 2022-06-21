@@ -133,9 +133,7 @@ if (isset($_POST['check-reset-otp'])) {
 if (isset($_POST['change-password'])) {
 
     $password = mysqli_real_escape_string($con, $_POST['password']);
-
-
-    $code = 0;
+     $code = 0;
     $email = $_SESSION['email']; //getting this email using session
     $encpass = password_hash($password, PASSWORD_BCRYPT);
     $update_pass = "UPDATE information SET code = $code, password = '$encpass' WHERE email = '$email'";
