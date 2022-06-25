@@ -49,12 +49,12 @@ if (isset($_POST['check'])) {
         $email = $fetch_data['email'];
         $code = 0;
         $status = 'verified';
-        $update_otp = "UPDATE information SET code = $code, status = '$status' WHERE code = $fetch_code";
+        $update_otp = "UPDATE information SET code = '$code', status = '$status' WHERE code = $fetch_code";
         $update_res = mysqli_query($con, $update_otp);
         if ($update_res) {
             $_SESSION['user'] = $user;
             $_SESSION['email'] = $email;
-            header('location: dangnhap.php?notification = Đăng ký tải khoản thành công');
+            header('Location: dangnhap.php?notification= Đăng kí tài khoản thành công');
             exit();
         } else {
             $errors['otp-error'] = "Lỗi trong quá trình đăng ký!";
@@ -73,12 +73,14 @@ if (isset($_POST['login'])) {
     if (mysqli_num_rows($res) > 0) {
         $fetch = mysqli_fetch_assoc($res);
         $fetch_pass = $fetch['password'];
+        $fetch_user=$fetch['user'];
         if (password_verify($password, $fetch_pass)) {
             $_SESSION['email'] = $email;
             $status = $fetch['status'];
             if ($status == 'verified') {
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $password;
+                $_SESSION['user']=$fetch_user;
                 header('location: home.php');
             } else {
 
@@ -100,32 +102,41 @@ if (isset($_POST['check-email'])) {
     if (mysqli_num_rows($run_sql) > 0) {
         $code = rand(999999, 111111);
         $insert_code = "UPDATE information SET code = '$code' WHERE email = '$email'";
+        // die($insert_code);
         $run_query =  mysqli_query($con, $insert_code);
         if ($run_query) {
-            include 'mail.php';
-            sendmail($email, $code);
+
+             include 'mail.php';
+            (sendmail($email,$code));
+                $_SESSION['email'] = $email;
+                header('location: confirm-forget.php');
+                exit();
+           
         } else {
             $errors['db-error'] = "Không hợp lệ!";
         }
     } else {
-        $errors['email'] = "Email này đã tồn tại!";
+        $errors['email'] = "Email này chưa được đăng ký!";
     }
 }
 
 //if user click check reset otp button
-if (isset($_POST['check-reset-otp'])) {
+if(isset($_POST['check-reset-otp'])){
+    
     $otp_code = mysqli_real_escape_string($con, $_POST['otp']);
-    $check_code = "SELECT * FROM information WHERE code = $otp_code";
+    $check_code = "SELECT * FROM information WHERE code ='$otp_code'";
     $code_res = mysqli_query($con, $check_code);
-    if (mysqli_num_rows($code_res) > 0) {
+    if(mysqli_num_rows($code_res) > 0){
+        
         $fetch_data = mysqli_fetch_assoc($code_res);
         $email = $fetch_data['email'];
         $_SESSION['email'] = $email;
-
+       
         header('location: update.php');
         exit();
-    } else {
-        $errors['otp-error'] = "Bạn nhập mã OTP không hợp lệ!";
+    }else{
+        
+        $errors['otp-error'] = "Mã OTP không hợp lệ!";
     }
 }
 
@@ -133,7 +144,9 @@ if (isset($_POST['check-reset-otp'])) {
 if (isset($_POST['change-password'])) {
 
     $password = mysqli_real_escape_string($con, $_POST['password']);
-     $code = 0;
+
+
+    $code = 0;
     $email = $_SESSION['email']; //getting this email using session
     $encpass = password_hash($password, PASSWORD_BCRYPT);
     $update_pass = "UPDATE information SET code = $code, password = '$encpass' WHERE email = '$email'";
@@ -141,7 +154,34 @@ if (isset($_POST['change-password'])) {
     if ($run_query) {
       
         header('Location: dangnhap.php?notification= Thay đôi mật khẩu thành công');
+        exit();
     } else {
         $errors['db-error'] = "Lỗi trong quá khi thay đổi mật khẩu!";
     }
+}
+if(isset($_POST['logout'])){
+    $_SESSION="";
+    header('location: index.html');
+}
+if(isset($_POST['addInCart'])){
+    $user_session=$_SESSION['user'];
+    $id_product=$_GET['id'];
+    $insert_product= "INSERT INTO PRODUCT (user,id,quantity)
+    VALUES('$user_session','$id_product',1)
+    ";
+    mysqli_query($con,$insert_product);
+
+}
+if(isset($_POST['delete'])){
+    $id=$_GET['id'];
+    $user_session=$_SESSION['user'];
+    mysqli_query($con,"DELETE FROM PRODUCT WHERE id='$id' and user='$user_session'");
+}
+if(isset($_POST['update'])){
+    $id=$_GET['id'];
+    $quantity=$_POST['quantity'];
+    $user_session=$_SESSION['user'];
+    mysqli_query($con,"UPDATE  PRODUCT 
+    SET QUANTITY=$quantity
+     WHERE id='$id' and user='$user_session'");
 }

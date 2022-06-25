@@ -124,3 +124,107 @@ function more(){
   $('.cart-shortcut .after').text(quantity);
 }
 
+function searchFromPrice(){
+    // const product= document.getElementsByClassName('item-content');
+   
+    // const x= product[2].getElementsByTagName("span").value;
+    // alert(x);
+
+
+    if($("#filter-duoi-100-000d").is(":checked")){
+        $(".item-content").css("visibility","hidden");
+        $(".notification").text("Không có sản phẩm");
+        
+    }
+    else if($("#filter-100-000d-200-000d").is(":checked")){
+      $(".item-content").css("visibility","hidden");
+      $(".200k").css("visibility","visible");
+      $(".notification").text("");
+    }
+    else if($("#filter-200-000d-300-000d").is(":checked")){
+      $(".item-content").css("visibility","hidden");
+      $(".200k").css("display","none");
+      $(".300k").css("visibility","visible");
+      $(".notification").text("");
+    }
+    else if($("#filter-300-000d-500-000d").is(":checked")){
+      $(".item-content").css("visibility","hidden");
+      $(".200k").css("display","none");
+      $(".300k").css("display","none");
+      $(".500k").css("visibility","visible");
+      $(".notification").text("");
+    }
+    else if($("#filter-500-000d-1-000-000d").is(":checked")){
+      $(".item-content").css("visibility","hidden");
+        $(".notification").text("Không có sản phẩm");
+    }
+    else if($("#filter-tren1-000-000d").is(":checked")){
+      $(".item-content").css("visibility","hidden");
+        $(".notification").text("Không có sản phẩm");
+    }
+    else{
+      $(".item-content").css("visibility","visible");
+        $(".notification").text("");
+        $(".500k").css("visibility","visible");
+        $(".300k").css("visibility","visible");
+        $(".200k").css("visibility","visible");
+        $(".200k").css("display","block");
+      $(".300k").css("display","block");
+    }
+}
+function searchFromPrice1(){
+  // const product= document.getElementsByClassName('item-content');
+ 
+  // const x= product[2].getElementsByTagName("span").value;
+  // alert(x);
+
+
+  if($("#filter-duoi-100-000d1").is(":checked")){
+      $(".item-content").css("visibility","hidden");
+      $(".notification").text("Không có sản phẩm");
+      
+  }
+  else if($("#filter-100-000d-200-000d1").is(":checked")){
+    $(".item-content").css("visibility","hidden");
+    $(".200k").css("visibility","visible");
+    $(".notification").text("");
+  }
+  else if($("#filter-200-000d-300-000d1").is(":checked")){
+    $(".item-content").css("visibility","hidden");
+    $(".200k").css("display","none");
+    $(".300k").css("visibility","visible");
+    $(".notification").text("");
+  }
+  else if($("#filter-300-000d-500-000d1").is(":checked")){
+    $(".item-content").css("visibility","hidden");
+    $(".200k").css("display","none");
+    $(".300k").css("display","none");
+    $(".500k").css("visibility","visible");
+    $(".notification").text("");
+  }
+  else if($("#filter-500-000d-1-000-000d1").is(":checked")){
+    $(".item-content").css("visibility","hidden");
+      $(".notification").text("Không có sản phẩm");
+  }
+  else if($("#filter-tren1-000-000d1").is(":checked")){
+    $(".item-content").css("visibility","hidden");
+      $(".notification").text("Không có sản phẩm");
+  }
+  else{
+    $(".item-content").css("visibility","visible");
+      $(".notification").text("");
+      $(".500k").css("visibility","visible");
+      $(".300k").css("visibility","visible");
+      $(".200k").css("visibility","visible");
+      $(".200k").css("display","block");
+    $(".300k").css("display","block");
+  }
+}
+function openSearch(){
+  $(".price-search").show("slow");
+  
+}
+function closeSearch(){
+  $(".price-search").hide("slow");
+  
+}

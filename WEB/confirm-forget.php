@@ -1,3 +1,6 @@
+<?php
+    require_once "controller.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,21 +50,48 @@
         border: 1px #a62424 solid;
         height: 25px;
         width: 30%;
-        border-radius: 5px;
+        border-radius: 20px;
     }
 </style>
 
 <body>
     <div class="content">
+    <div style="text-align:center;color: red">
+        <?php
+        if (count($errors) == 1) {
+        ?>
+            <div>
+                <?php
+                foreach ($errors as $showerror) {
+                    echo $showerror;
+                }
+                ?>
+            </div>
+        <?php
+        } elseif (count($errors) > 1) {
+        ?>
+            <div>
+                <?php
+                foreach ($errors as $showerror) {
+                ?>
+                    <li> <?php echo $showerror; ?> </li>
+                <?php
+                }
+                ?>
+            </div>
+        <?php
+        }
+        ?>
+    </div>
         <form action="confirm-forget.php" method="POST">
             <p>
                 Nhập mã OTP để xác nhận :
             </p>
-            <br> <input type="text" placeholder="Nhập mã" name="otp">
+            <br> <input type="text" placeholder="Nhập mã" name="otp" style=" border-radius: 20px;">
             <br>
             <br>
-            <input type="checkbox"> Xác nhận bạn không phải robot
-            <br>
+            <!-- <input type="checkbox"> Xác nhận bạn không phải robot
+            <br> -->
             <br>
             <button name="check-reset-otp" type="submit">Xác nhận</button>
             

@@ -50,7 +50,7 @@ require 'controller.php'
         border: 1px #a62424 solid;
         height: 25px;
         width: 30%;
-        border-radius: 5px;
+        border-radius: 20px;
     }
 </style>
 
@@ -88,11 +88,10 @@ require 'controller.php'
         }
         ?>
     </div>
-            <br> <input type="text" placeholder="Nhập mã" name="otp">
+            <br> <input type="text" placeholder="Nhập mã" name="otp" style="border-radius: 20px">
             <br>
             <br>
-            <input type="checkbox"> Xác nhận bạn không phải robot
-            <br>
+           
             <br>
             <button type="submit" name="check">Xác nhận</button>
 

@@ -9,12 +9,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <div class="container">
     
     <section>
-        <img style="width: 650px;height:400px;padding-top: 10%;" src="https://phapluatbandoc.mediacdn.vn//150157425591193600/2020/8/11/2020070716320763410-15971147028401677168894.gif" alt="banner1">
+    <a href="index.html" style="text-decoration: none;font-size: larger;padding: 20px 20px;font-weight: bolder;">
+            HOME
+        </a>
+        <video autoplay muted loop style="width: 700px;height: auto;">
+            <source src="video/video.mp4" type="video/mp4">
+
+        </video>
 
         <article>
 

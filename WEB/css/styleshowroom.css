@@ -51,76 +51,7 @@
 	font-weight: bold;
 	opacity: 70%;
 }
-.div_thong_tin{
-	width: 200px;
-	height: 250;
-	
-	position: absolute;
-	
-	left: 70px;
-	top: 350px;
-	line-height: 50px;
-	font-size: 12px;
-	font-weight: bolder;
-	cursor: pointer;
-}
-.div_chinh_sach{
-	width: 200px;
-	height: 250;
-	
-	position: absolute;
-	
-	left: 250px;
-	top: 350px;
-	line-height: 50px;
-	font-size: 12px;
-	font-weight: bolder;
-	cursor: pointer;
-}
-.div_lien_he{
-	width: 430px;
-	height: 250;
-	
-	position: absolute;
-	
-	left: 450px;
-	top: 350px;
-	line-height: 50px;
-	font-size: 12px;
-	font-weight: bolder;
-	cursor: pointer;
-}
-.div_fanpage{
-	width: 430px;
-	height: 250;
-	
-	position: absolute;
-	
-	left: 900px;
-	top: 360px;
-	cursor: pointer;
-}
-.div_lien_he span:hover{
-	color:#a62424;;
-	margin-left: +5px;
-}
-.div_chinh_sach span:hover{
-	color:#a62424;;
-	margin-left: +5px;
-}
-.div_thong_tin span:hover{
-	color:#a62424;;
-	margin-left: +5px;
-}
-.div_thong_tin span{
-	transition: margin ease 0.5s;
-}
-.div_chinh_sach span{
-	transition: margin ease 0.5s;
-}
-.div_lien_he span{
-	transition: margin ease 0.5s;
-}
+
 .container-swap{
 	display: flex;
 	justify-content: space-evenly;
@@ -140,10 +71,10 @@
 }
 .swap-content .item-swap-content:last-child{
 	padding-top: 5%;
-	font-size: 1vw;
+	font-size: 1.35vw;
 }
 .swap-content .item-swap-content:last-child p{
-	font-size: 1.5vw;
+	font-size: 1.6vw;
 	font-weight: bold;
 }
 .swap-content:hover{
@@ -164,3 +95,51 @@
 	margin-top: -8px;
 	margin-left: -7px;
 }
+@media only screen and (max-width:800px){
+	.access-fanpage p{
+		display: none;
+	}
+	.access-fanpage button{ 
+		width:40px;
+		margin-top: +6px;
+		height: 30px;
+
+	}
+	.access-fanpage button span{
+		display: none;
+	}
+	.access-fanpage span{
+		display: none;
+	}
+}
+.information-footer{
+	display: flex;
+	padding-top: 5px;
+	justify-content: space-evenly;
+}
+.information-footer .content-item{
+	
+	width: 20%;
+}
+.information-footer .content-item:first-child{
+	margin-left: +2%;
+}
+.information-footer .content-item .title{
+	font-size: 25px;
+	font-weight: bold;
+}
+.information-footer .content-item .content p{
+	line-height: 4vw;
+	font-size: 16px;
+}
+.information-footer .content-item .fanpage{
+	
+	background-color: #ffffff;
+	height: 47px;
+	border: 1px solid;
+	display: flex;
+	padding: 2px;
+}
+.information-footer .content-item .fanpage .access-fanpage button{
+	margin-left: 10%;
+}	
