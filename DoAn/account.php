@@ -2,6 +2,10 @@
     require_once "controller.php";
     require_once "connection.php";
     $user=$_SESSION['user'];
+    if($user==""){
+        header("location: index.html");
+    }
+    
     $sql="SELECT * FROM INFORMATION WHERE user='$user'";
     
     $result=mysqli_query($con,$sql);

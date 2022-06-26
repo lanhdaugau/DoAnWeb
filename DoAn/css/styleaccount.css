@@ -243,6 +243,9 @@ div:nth-child(3) {
   .image{
     margin-left: -5px;
   }
+ .header{
+  display: none;
+ }
 }
 .total{
   background-color: #a62424;

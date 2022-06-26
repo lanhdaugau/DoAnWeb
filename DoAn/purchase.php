@@ -3,6 +3,10 @@ require_once "controller.php";
 require_once "connection.php";
 
 $user = $_SESSION['user'];
+if($user==""){
+    header("location: index.html");
+}
+
 $sql = "SELECT * FROM PRODUCT p,PRO_DETAIL d WHERE user='$user' and p.id=d.id ";
 
 $result = mysqli_query($con, $sql);
@@ -82,9 +86,9 @@ $fetch_data = mysqli_fetch_assoc($result);
                             #a62424;color:white;padding: 5px 20px;margin-left:
                             +20px;border-radius: 3px;cursor: pointer;"> Chat
                     </span>
-                    <span style="border: 1px solid grey;margin-left:
+                    <!-- <span class="view-detail" style="border: 1px solid grey;margin-left:
                             +20px;padding: 5px 19px;border-radius: 3px;cursor:
-                            pointer;">Xem shop</span>
+                            pointer;">Xem shop</span> -->
 
 
                    

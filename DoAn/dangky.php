@@ -57,7 +57,7 @@
 
                 <form action="dangky.php" method="post">
                     <label for="pass" class="dangnhap-label"></label>
-                    <input type="text" class="input" placeholder="Tên đầy đủ">
+                    <input type="text" class="input" placeholder="Tên đầy đủ" name="fullname">
                     <label for="pass" class="dangnhap-label"></label>
                     <input type="email" id="fullname" class="input" name="email" placeholder="Email">
                     <label for="pass" class="dangnhap-label"></label>

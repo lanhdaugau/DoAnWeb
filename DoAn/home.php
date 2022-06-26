@@ -1,7 +1,6 @@
-
 <?php
-	require_once "connection.php";
-	require "controller.php";
+require_once "connection.php";
+require "controller.php";
 
 ?>
 <!DOCTYPE html>
@@ -67,13 +66,15 @@
 			<i class="fa fa-cart-arrow-down"></i>
 			<div class="after">
 				<?php
-					$user=$_SESSION['user'];
-					$sql="SELECT * FROM PRODUCT WHERE user='$user'";
-					
-					$result=mysqli_query($con,$sql);
-					if(mysqli_num_rows($result)>0){
-						echo mysqli_num_rows($result);
-					}
+				$user = $_SESSION['user'];
+				$sql = "SELECT * FROM PRODUCT WHERE user='$user'";
+
+				$result = mysqli_query($con, $sql);
+				if (mysqli_num_rows($result) > 0) {
+					echo mysqli_num_rows($result);
+				} else {
+					echo 0;
+				}
 				?>
 			</div>
 		</div>
@@ -150,7 +151,7 @@
 									<a class="active">Trang chủ</a>
 									<a href="sanpham.html">Sản phẩm</a>
 									<a href="#contact">Khuyến mãi</a>
-									
+
 
 
 								</div>
@@ -230,13 +231,13 @@
 										</div>
 
 										<div class="cart">
-										<form action="home.php?id=sp1" method="POST">
-										<button name="addInCart"  class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp1')">
-												<span><span class="fa fa-shopping-basket"></span></span>
-												Giỏ hàng
-											</button>
-										</form>
-											
+											<form action="home.php?id=sp1" method="POST">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp1')">
+													<span><span class="fa fa-shopping-basket"></span></span>
+													Giỏ hàng
+												</button>
+											</form>
+
 										</div>
 
 									</div>
@@ -272,10 +273,10 @@
 
 										<div class="cart">
 											<form action="home.php?id=sp2" method="POST">
-											<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp2')">
-												<span><span class="fa fa-shopping-basket"></span></span>
-												Giỏ hàng
-											</button>
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp2')">
+													<span><span class="fa fa-shopping-basket"></span></span>
+													Giỏ hàng
+												</button>
 											</form>
 										</div>
 									</div>
@@ -311,12 +312,12 @@
 										</div>
 
 										<div class="cart">
-										<form action="home.php?id=sp3" method="POST">
-											<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp3')">
-												<span><span class="fa fa-shopping-basket"></span></span>
-												Giỏ hàng
-											</button>
-										</form>
+											<form action="home.php?id=sp3" method="POST">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp3')">
+													<span><span class="fa fa-shopping-basket"></span></span>
+													Giỏ hàng
+												</button>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -350,12 +351,12 @@
 										</div>
 
 										<div class="cart">
-										<form action="home.php?id=sp4" method="POST">
-											<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp4')">
-												<span><span class="fa fa-shopping-basket"></span></span>
-												Giỏ hàng
-											</button>
-										</form>
+											<form action="home.php?id=sp4" method="POST">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp4')">
+													<span><span class="fa fa-shopping-basket"></span></span>
+													Giỏ hàng
+												</button>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -389,12 +390,12 @@
 										</div>
 
 										<div class="cart">
-										<form action="home.php?id=sp5" method="POST">
-											<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp5')">
-												<span><span class="fa fa-shopping-basket"></span></span>
-												Giỏ hàng
-											</button>
-										</form>
+											<form action="home.php?id=sp5" method="POST">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp5')">
+													<span><span class="fa fa-shopping-basket"></span></span>
+													Giỏ hàng
+												</button>
+											</form>
 										</div>
 									</div>
 
@@ -453,12 +454,12 @@
 											</div>
 
 											<div class="cart">
-											<form action="home.php?id=sp6" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp6')">
-													<span><span class="fa fa-shopping-basket"></span></span>
-													Giỏ hàng
-												</button>
-											</form>
+												<form action="home.php?id=sp6" method="POST">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp6')">
+														<span><span class="fa fa-shopping-basket"></span></span>
+														Giỏ hàng
+													</button>
+												</form>
 											</div>
 										</div>
 									</div>
@@ -492,12 +493,12 @@
 											</div>
 
 											<div class="cart">
-											<form action="home.php?id=sp7" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp7')">
-													<span><span class="fa fa-shopping-basket"></span></span>
-													Giỏ hàng
-												</button>
-											</form>
+												<form action="home.php?id=sp7" method="POST">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp7')">
+														<span><span class="fa fa-shopping-basket"></span></span>
+														Giỏ hàng
+													</button>
+												</form>
 											</div>
 										</div>
 									</div>
@@ -531,12 +532,12 @@
 											</div>
 
 											<div class="cart">
-											<form action="home.php?id=sp8" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp8')">
-													<span><span class="fa fa-shopping-basket"></span></span>
-													Giỏ hàng
-												</button>
-											</form>
+												<form action="home.php?id=sp8" method="POST">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp8')">
+														<span><span class="fa fa-shopping-basket"></span></span>
+														Giỏ hàng
+													</button>
+												</form>
 											</div>
 										</div>
 									</div>
@@ -570,12 +571,12 @@
 											</div>
 
 											<div class="cart">
-											<form action="home.php?id=sp9" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp9')">
-													<span><span class="fa fa-shopping-basket"></span></span>
-													Giỏ hàng
-												</button>
-											</form>
+												<form action="home.php?id=sp9" method="POST">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp9')">
+														<span><span class="fa fa-shopping-basket"></span></span>
+														Giỏ hàng
+													</button>
+												</form>
 											</div>
 										</div>
 									</div>
@@ -609,11 +610,12 @@
 											</div>
 
 											<div class="cart">
-											<form action="home.php?id=sp10" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp10')">
-													<span><span class="fa fa-shopping-basket"></span></span>
-													Giỏ hàng
-												</button></form>
+												<form action="home.php?id=sp10" method="POST">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp10')">
+														<span><span class="fa fa-shopping-basket"></span></span>
+														Giỏ hàng
+													</button>
+												</form>
 											</div>
 										</div>
 									</div>
@@ -670,12 +672,12 @@
 										</div>
 
 										<div class="cart">
-										<form action="home.php?id=sp11" method="POST">
-											<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp11')">
-												<span><span class="fa fa-shopping-basket"></span></span>
-												Giỏ hàng
-											</button>
-										</form>
+											<form action="home.php?id=sp11" method="POST">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp11')">
+													<span><span class="fa fa-shopping-basket"></span></span>
+													Giỏ hàng
+												</button>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -708,12 +710,12 @@
 										</div>
 
 										<div class="cart">
-										<form action="home.php?id=sp12" method="POST">
-											<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp12')">
-												<span><span class="fa fa-shopping-basket"></span></span>
-												Giỏ hàng
-											</button>
-										</form>
+											<form action="home.php?id=sp12" method="POST">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp12')">
+													<span><span class="fa fa-shopping-basket"></span></span>
+													Giỏ hàng
+												</button>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -746,12 +748,12 @@
 										</div>
 
 										<div class="cart">
-										<form action="home.php?id=sp13" method="POST">
-											<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp13')">
-												<span><span class="fa fa-shopping-basket"></span></span>
-												Giỏ hàng
-											</button>
-										</form>
+											<form action="home.php?id=sp13" method="POST">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp13')">
+													<span><span class="fa fa-shopping-basket"></span></span>
+													Giỏ hàng
+												</button>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -784,12 +786,12 @@
 										</div>
 
 										<div class="cart">
-										<form action="home.php?id=sp14" method="POST">
-											<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp14')">
-												<span><span class="fa fa-shopping-basket"></span></span>
-												Giỏ hàng
-											</button>
-										</form>
+											<form action="home.php?id=sp14" method="POST">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp14')">
+													<span><span class="fa fa-shopping-basket"></span></span>
+													Giỏ hàng
+												</button>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -912,108 +914,112 @@
 
 							<div class="showroomnen">
 
-										<div class="showroom-address">
-											<div class="item-address">
-												<div class="vientrenshowroom"><h2>Địa chỉ miền Nam</h2></div>
-												<div class="showroom-content">
-													1. Showroom Trung Sơn: Số 233A – 235 – 237 Đường 9A, KDC Trung Sơn,
-													Ấp 4, Bình Hưng, Bình <br>Chánh, Tp. HCM<br><br>
-
-													2. Big C Trường Chinh: Tầng 2, Big C Trường Chinh, Số 1 Trường
-													Chinh,
-													Tây Thạnh, Tân Phú,<br> Tp. HCM<br><br>
-
-													3. Điện Máy Chợ Lớn quận 4: Chung cư H2, 196 Hoàng Diệu, Phường 8,
-													Quận 4, Tp. HCM<br>
-
-												</div>
-											</div>
-											<br>
-											<div class="item-address">
-												<div class="vientrenshowroom"><h2>Địa chỉ miền Bắc</h2></div>
-												<div class="showroom-content">
-													1. Showoom Hà Nội (Tầng 1): Số 109 Trung Hòa, Cầu Giấy, Hà Nội
-													<br><br>
-													2. Big C Thăng Long (Tầng 2): Số 222 Trần Duy Hưng - Cầu Giấy - Hà
-													Nội
-													<br><br>
-													3. Siêu Thị Pico Nguyễn Trãi (Tầng 2): Số 76 Nguyễn Trãi, Thanh
-													Xuân,
-													Hà Nội
-												</div>
-											</div>
+								<div class="showroom-address">
+									<div class="item-address">
+										<div class="vientrenshowroom">
+											<h2>Địa chỉ miền Nam</h2>
 										</div>
-										<div class="information-footer">
-											<div class="content-item">
-												<div class="title">Thông tin</div>
-												<div class="content">
-													<p>Trang chủ</p>
-													<p>Sản phẩm</p>
-													<p>Showroom</p>
-												</div>
-											</div>
-											<div class="content-item">
-												<div class="title">Chính sách</div>
-												<div class="content">
-													<p>Chính sách bảo hành</p>
-													<p>Điều khoản sử dụng </p>
-													<p>Chính sách bảo mật</p>
-													<p>Phươn thức giao hàng</p>
-													<p>Chính sách trả hàng</p>
-												</div>
-											</div>
-											<div class="content-item">
-												<div class="title">Liên hệ</div>
-												<div class="content">
-													<p>Ngũ Hành Sơn, Đà Nẵng, Việt Nam</p>
-													<p>0367123123</p>
-													<p>Bảo hành 028 7106 5858 - 028 5431 8607</p>
+										<div class="showroom-content">
+											1. Showroom Trung Sơn: Số 233A – 235 – 237 Đường 9A, KDC Trung Sơn,
+											Ấp 4, Bình Hưng, Bình <br>Chánh, Tp. HCM<br><br>
 
-												</div>
-											</div>
-											<div class="content-item">
-												<div class="title">Fanage</div>
-												<div class="fanpage">
-													<div class="logo">
-														<img src="images/icon.jpg" alt="">
-													</div>
-													<div class="access-fanpage">
-														<p>CÔNG TY BÁN ĐỒ GIA DỤNG</p>
-														<button><i class="fa fa-facebook-f"></i><span>Facebook</span></button>
-														<span>100k lượt thích</span>
-													</div>
-												</div>
+											2. Big C Trường Chinh: Tầng 2, Big C Trường Chinh, Số 1 Trường
+											Chinh,
+											Tây Thạnh, Tân Phú,<br> Tp. HCM<br><br>
 
-											</div>
-										</div>
+											3. Điện Máy Chợ Lớn quận 4: Chung cư H2, 196 Hoàng Diệu, Phường 8,
+											Quận 4, Tp. HCM<br>
 
-
-										<hr style="width: 100%;text-align: center;">
-										<div style="text-align:center;position: absolute;top: +750px;">
-											TRANG CHỦ &#10072; SẢN PHẨM &#10072; BLOG &#10072; KHUYẾN MẠI
-											&#10072;
-											SHOWROOM
-											<br>
-											Với tiêu chí "Hài Lòng Khách Đến - Vừa Lòng Khách Đi" chúng tôi luôn
-											mong muốn mang lại dịch vụ tiện ích nhất cho khách hàng với chi phí
-											rẻ
-											nhất, tốt nhất. Cảm ơn quý khách hàng đã đồng hành cùng chúng tôi
-											trong thời gian qua.
 										</div>
 									</div>
+									<br>
+									<div class="item-address">
+										<div class="vientrenshowroom">
+											<h2>Địa chỉ miền Bắc</h2>
+										</div>
+										<div class="showroom-content">
+											1. Showoom Hà Nội (Tầng 1): Số 109 Trung Hòa, Cầu Giấy, Hà Nội
+											<br><br>
+											2. Big C Thăng Long (Tầng 2): Số 222 Trần Duy Hưng - Cầu Giấy - Hà
+											Nội
+											<br><br>
+											3. Siêu Thị Pico Nguyễn Trãi (Tầng 2): Số 76 Nguyễn Trãi, Thanh
+											Xuân,
+											Hà Nội
+										</div>
+									</div>
+								</div>
+								<div class="information-footer">
+									<div class="content-item">
+										<div class="title">Thông tin</div>
+										<div class="content">
+											<p>Trang chủ</p>
+											<p>Sản phẩm</p>
+											<p>Showroom</p>
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="title">Chính sách</div>
+										<div class="content">
+											<p>Chính sách bảo hành</p>
+											<p>Điều khoản sử dụng </p>
+											<p>Chính sách bảo mật</p>
+											<p>Phươn thức giao hàng</p>
+											<p>Chính sách trả hàng</p>
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="title">Liên hệ</div>
+										<div class="content">
+											<p>Ngũ Hành Sơn, Đà Nẵng, Việt Nam</p>
+											<p>0367123123</p>
+											<p>Bảo hành 028 7106 5858 - 028 5431 8607</p>
+
+										</div>
+									</div>
+									<div class="content-item">
+										<div class="title">Fanage</div>
+										<div class="fanpage">
+											<div class="logo">
+												<img src="images/icon.jpg" alt="">
+											</div>
+											<div class="access-fanpage">
+												<p>CÔNG TY BÁN ĐỒ GIA DỤNG</p>
+												<button><i class="fa fa-facebook-f"></i><span>Facebook</span></button>
+												<span>100k lượt thích</span>
+											</div>
+										</div>
+
+									</div>
+								</div>
 
 
+								<hr style="width: 100%;text-align: center;">
+								<div style="text-align:center;position: absolute;top: +750px;">
+									TRANG CHỦ &#10072; SẢN PHẨM &#10072; BLOG &#10072; KHUYẾN MẠI
+									&#10072;
+									SHOWROOM
+									<br>
+									Với tiêu chí "Hài Lòng Khách Đến - Vừa Lòng Khách Đi" chúng tôi luôn
+									mong muốn mang lại dịch vụ tiện ích nhất cho khách hàng với chi phí
+									rẻ
+									nhất, tốt nhất. Cảm ơn quý khách hàng đã đồng hành cùng chúng tôi
+									trong thời gian qua.
+								</div>
 							</div>
 
 
+						</div>
 
-							</div>
 
 
-							</div>
-							</div>
+					</div>
 
-		</tr>
+
+				</div>
+			</div>
+
+			</tr>
 	</table>
 	<div class="overlay">
 		<div class="overlay-coating">

@@ -10,8 +10,12 @@ if (isset($_POST['signup'])) {
     $user = mysqli_real_escape_string($con, $_POST['user']);
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
+    $name = mysqli_real_escape_string($con, $_POST['fullname']);
     $email_check = "SELECT * FROM information WHERE email = '$email'";
     $res = mysqli_query($con, $email_check);
+    if(empty($user) ||  empty($email) || empty($password) || empty($name)){
+        $errors['error']="Vui lòng điền đầy đủ thông tin";
+    }
     if (mysqli_num_rows($res) > 0) {
         $errors['email'] = "Email này đã tồn tại!";
     }
@@ -24,8 +28,9 @@ if (isset($_POST['signup'])) {
         $encpass = password_hash($password, PASSWORD_BCRYPT);
         $code = rand(999999, 111111);
         $status = "notverified";
-        $insert_data = "INSERT INTO information(user,email,password, code, status)
-                        values('$user','$email','$encpass', '$code', '$status')";
+        $insert_data = "INSERT INTO information(user,email,password, code, status,name)
+                        values('$user','$email','$encpass', '$code', '$status','$name')";
+
         $data_check = mysqli_query($con, $insert_data);
         if ($data_check) {
             include 'mail.php';
@@ -166,19 +171,19 @@ if (isset($_POST['addInCart'])) {
     $user_session = $_SESSION['user'];
     $id_product = $_GET['id'];
     $check_exitst = "SELECT * FROM PRODUCT WHERE ID='$id_product' and USER='$user_session'";
-    
+
     $result = mysqli_query($con, $check_exitst);
 
     if (mysqli_num_rows($result) > 0) {
         $update = "UPDATE PRODUCT 
         SET QUANTITY=QUANTITY+1
         WHERE id='$id_product' and user='$user_session'";
-        mysqli_query($con,$update);
+        mysqli_query($con, $update);
     } else {
         $insert_product = "INSERT INTO PRODUCT (user,id,quantity)
         VALUES('$user_session','$id_product',1)
     ";
-        mysqli_query($con, $insert_product);    
+        mysqli_query($con, $insert_product);
     }
 }
 if (isset($_POST['delete'])) {
@@ -190,12 +195,10 @@ if (isset($_POST['update'])) {
     $id = $_GET['id'];
     $quantity = $_POST['quantity'];
     $user_session = $_SESSION['user'];
-    if($quantity==0){
+    if ($quantity == 0) {
         mysqli_query($con, "DELETE FROM PRODUCT WHERE id='$id' and user='$user_session'");
-    
-    }
-    else{
-    mysqli_query($con, "UPDATE  PRODUCT 
+    } else {
+        mysqli_query($con, "UPDATE  PRODUCT 
     SET QUANTITY=$quantity
      WHERE id='$id' and user='$user_session'");
     }
