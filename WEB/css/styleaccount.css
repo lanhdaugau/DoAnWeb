@@ -215,19 +215,43 @@ li {
 .product-information div:nth-child(2),
 div:nth-child(3) {
   padding-top: 20px;
-  line-height: 35px;
+  line-height: 20px;
 }
 
 .product-information div:nth-child(2) {
   margin-left: -6vw;
 }
 
-.delete-btn{
-  border:1px solid red;
-  color: white;
+.delete-btn {
+  padding: 4px;
+  border: 1px solid red;
+
+  border-radius: 5px;
 }
-@media only screen and (max-witdh=800px){
-  .inf{
+
+.update-btn {
+  padding: 4px;
+  border: 1px solid rgb(15, 156, 22);
+
+  border-radius: 5px;
+}
+
+@media only screen and (max-width:800px){
+  .inf {
     display: none;
   }
+  .image{
+    margin-left: -5px;
+  }
+}
+.total{
+  background-color: #a62424;
+  color: white;
+  text-align: right;
+  height: 30px;
+  padding: 20px 20px 10px 20px;
+  width: auto ;
+}
+.price-total{
+  font-size: x-large;
 }

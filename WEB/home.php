@@ -77,12 +77,12 @@
 				?>
 			</div>
 		</div>
-		<tr>
+		<div>
 
-			<td>
-				<table>
+			<div>
+				<div>
 
-					<tr style="height: 10%;">
+					<div style="height: 10%;">
 						<!-- các thông tin liên hệ trên cùng -->
 						<div class="anhtren">
 							<span><img src="https://icons.iconarchive.com/icons/double-j-design/apple-festival/16/app-phone-icon.png">
@@ -96,11 +96,11 @@
 								dõi đơn hàng</span>
 						</div>
 
-					</tr>
+					</div>
 
-					<tr>
+					<div>
 
-						<td>
+						<div>
 
 
 							<br>
@@ -150,7 +150,7 @@
 									<a class="active">Trang chủ</a>
 									<a href="sanpham.html">Sản phẩm</a>
 									<a href="#contact">Khuyến mãi</a>
-									<a href="#about">Chăm sóc khách hàng</a>
+									
 
 
 								</div>
@@ -1126,8 +1126,8 @@
 						</span>
 						<br>
 						<div class="button-pay" onclick="window.open('purchase.php','_self')">
-							<a class="button btn-proceed-checkout" title="Đi đến giỏ hàng"><span>Tiến
-									hành thanh toán</span></a>
+							<a class="button btn-proceed-checkout" title="Đi đến giỏ hàng"><span>
+									Đi đến giỏ hàng</span></a>
 						</div>
 
 					</div>

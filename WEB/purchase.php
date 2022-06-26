@@ -87,16 +87,18 @@ $fetch_data = mysqli_fetch_assoc($result);
                             pointer;">Xem shop</span>
 
 
-                    <!-- <hr width="99%"> -->
+                   
 
                     <table style="text-align: center;" >
                         <?php
+                        $price_total=0;
                         foreach ($result as $key) {
+                            $price_total += ($key['price']*$key['quantity']);
                         ?>
-
+                            
                             <tr>
                                 <td rowspan="3" style="background-size:
-                                cover;width: 10vw;height:150px;background-image: url('<?php echo $key['image']; ?>');">
+                                cover;width: 10vw;height:10vw;background-image: url('<?php echo $key['image']; ?>');">
 
                                 </td>
                                 <td style="width: 15vw;" class="inf">
@@ -118,7 +120,7 @@ $fetch_data = mysqli_fetch_assoc($result);
                                 </td>
                                 <td>
                                   <form action="purchase.php?id=<?=$key['id'] ?>" method="POST" >
-                                        <input type="submit" class="delete-btn" onclick="return confirm('bạn có muốn xóa sản phẩm này kh');" value="Xóa" name="delete">
+                                        <input type="submit" class="delete-btn" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không?');" value="Xóa" name="delete">
                                   </form>
                                 
                                  
@@ -130,8 +132,8 @@ $fetch_data = mysqli_fetch_assoc($result);
                             <tr>
                                 <td colspan="2">
                                     <form action="purchase.php?id=<?=$key['id'] ?>" method="post">
-                                   Số lượng <input type="number" value="<?php echo $key['quantity']?>" style="width: 30px;padding-left: 10px;" name="quantity">
-                                    <input type="submit" name="update" value="Cập nhật">
+                                   Số lượng <input type="number" value="<?php echo $key['quantity']?>" style="width: 30px;padding-left: 10px;padding: 3px 0;" name="quantity" min="0">
+                                    <input type="submit" class="update-btn" name="update" value="Cập nhật">
                                     </form>
                                 </td>
                                 
@@ -144,9 +146,9 @@ $fetch_data = mysqli_fetch_assoc($result);
                                         echo $key['quantity'] . " sản phẩm";
                                         ?>
                                     </span>
-                                    <span style="float:right;font-size: 20px;color:white;">
+                                    <span style="float:right;font-size: 16px;color:white;">
                                         <?php
-                                        echo "Tổng thành tiền: " . number_format($key['price']*$key['quantity'],0,',',',') . "VND";
+                                        echo "Tổng thành tiền: " . number_format($key['price']*$key['quantity'],0,',',',') . " VND";
                                         ?>
                                     </span>
                                 </td>
@@ -160,7 +162,12 @@ $fetch_data = mysqli_fetch_assoc($result);
                         ?>
 
                     </table>
-
+                    <br>
+                    <div class="total">
+                        Tổng giá trị các sản phẩm : <span class="price-total">
+                            <?php echo  number_format($price_total,0,',',','). " VND"?>
+                        </span>
+                    </div>
                     <br>
 
 

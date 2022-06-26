@@ -44,7 +44,7 @@
     </div>
     <div class="topnav">
 
-        <a  href="index.html">Trang chủ</a>
+        <a  href="home.php">Trang chủ</a>
         <a href="sanpham.html">Sản phẩm</a>
         <a href="#contact">Khuyến mãi</a>
         
@@ -52,7 +52,7 @@
 
     </div>
      
-    <div class="content">
+    <div class="content" style="height:580px">
        
         <div class="item">
             <ul>

@@ -116,7 +116,8 @@ button.dot{
 	}
 	.search-resize {
 		position: fixed;
-		right: +50px;
+		display: block;
+		
 		z-index: 100;
 	}
 }
@@ -126,8 +127,9 @@ button.dot{
 	
 }
 .search-resize{
-	/* visibility: hidden; */
-	/* position: fixed; */
+		
+	
+	z-index: -1;
 	right: 0;
 	top: 30%;
 	width: 30px;
