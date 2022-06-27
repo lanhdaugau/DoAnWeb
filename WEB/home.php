@@ -56,7 +56,7 @@ require "controller.php";
 		<p>Vui lòng đợi..</p>
 
 	</div>
-	<table style="height: 100%; width: 100%;">
+	<div>
 		<!-- button scroll top -->
 		<div id="back_top">
 			<i class="fas fa-chevron-up"></i>
@@ -115,8 +115,8 @@ require "controller.php";
 										Chọn danh mục
 									</div>
 									<div class="drop-down-list">
-										<div class="drop-down-item" onclick="window.open('purchase.php','_self')">Sản phẩm</div>
-										<div class="drop-down-item">Giỏ hàng</div>
+										<div class="drop-down-item" onclick="window.open('purchase.php','_self')">Giỏ hàng</div>
+										
 										<div class="drop-down-item" onclick="window.open('account.php','_self')">Tài khoản</div>
 									</div>
 
@@ -232,7 +232,7 @@ require "controller.php";
 
 										<div class="cart">
 											<form action="home.php?id=sp1" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp1')">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 													<span><span class="fa fa-shopping-basket"></span></span>
 													Giỏ hàng
 												</button>
@@ -273,7 +273,7 @@ require "controller.php";
 
 										<div class="cart">
 											<form action="home.php?id=sp2" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp2')">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 													<span><span class="fa fa-shopping-basket"></span></span>
 													Giỏ hàng
 												</button>
@@ -313,7 +313,7 @@ require "controller.php";
 
 										<div class="cart">
 											<form action="home.php?id=sp3" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp3')">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
 													<span><span class="fa fa-shopping-basket"></span></span>
 													Giỏ hàng
 												</button>
@@ -352,7 +352,7 @@ require "controller.php";
 
 										<div class="cart">
 											<form action="home.php?id=sp4" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp4')">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 													<span><span class="fa fa-shopping-basket"></span></span>
 													Giỏ hàng
 												</button>
@@ -391,7 +391,7 @@ require "controller.php";
 
 										<div class="cart">
 											<form action="home.php?id=sp5" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp5')">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 													<span><span class="fa fa-shopping-basket"></span></span>
 													Giỏ hàng
 												</button>
@@ -455,7 +455,7 @@ require "controller.php";
 
 											<div class="cart">
 												<form action="home.php?id=sp6" method="POST">
-													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp6')">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 														<span><span class="fa fa-shopping-basket"></span></span>
 														Giỏ hàng
 													</button>
@@ -494,7 +494,7 @@ require "controller.php";
 
 											<div class="cart">
 												<form action="home.php?id=sp7" method="POST">
-													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp7')">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 														<span><span class="fa fa-shopping-basket"></span></span>
 														Giỏ hàng
 													</button>
@@ -533,7 +533,7 @@ require "controller.php";
 
 											<div class="cart">
 												<form action="home.php?id=sp8" method="POST">
-													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp8')">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 														<span><span class="fa fa-shopping-basket"></span></span>
 														Giỏ hàng
 													</button>
@@ -572,7 +572,7 @@ require "controller.php";
 
 											<div class="cart">
 												<form action="home.php?id=sp9" method="POST">
-													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp9')">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 														<span><span class="fa fa-shopping-basket"></span></span>
 														Giỏ hàng
 													</button>
@@ -611,7 +611,7 @@ require "controller.php";
 
 											<div class="cart">
 												<form action="home.php?id=sp10" method="POST">
-													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp10')">
+													<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 														<span><span class="fa fa-shopping-basket"></span></span>
 														Giỏ hàng
 													</button>
@@ -673,7 +673,7 @@ require "controller.php";
 
 										<div class="cart">
 											<form action="home.php?id=sp11" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp11')">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
 													<span><span class="fa fa-shopping-basket"></span></span>
 													Giỏ hàng
 												</button>
@@ -711,7 +711,7 @@ require "controller.php";
 
 										<div class="cart">
 											<form action="home.php?id=sp12" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp12')">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 													<span><span class="fa fa-shopping-basket"></span></span>
 													Giỏ hàng
 												</button>
@@ -749,7 +749,7 @@ require "controller.php";
 
 										<div class="cart">
 											<form action="home.php?id=sp13" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp13')">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" >
 													<span><span class="fa fa-shopping-basket"></span></span>
 													Giỏ hàng
 												</button>
@@ -787,7 +787,7 @@ require "controller.php";
 
 										<div class="cart">
 											<form action="home.php?id=sp14" method="POST">
-												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng" onclick="addCart('sp14')">
+												<button name="addInCart" class="cart_button_style btn-cart left-to add_to_cart" title="Cho vào giỏ hàng">
 													<span><span class="fa fa-shopping-basket"></span></span>
 													Giỏ hàng
 												</button>
@@ -1057,7 +1057,7 @@ require "controller.php";
 						<br>
 						<div class="stocking">
 							Còn hàng
-							<div class="tooltip" onclick="more()">
+							<div class="tooltip" >
 								Thêm vào giỏ vàng
 							</div>
 						</div>

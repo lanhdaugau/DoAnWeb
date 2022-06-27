@@ -132,6 +132,7 @@ button.dot{
 	z-index: -1;
 	right: 0;
 	top: 30%;
+	left: -50px;
 	width: 30px;
 	background-color: #a62424;
 	height: 30px;

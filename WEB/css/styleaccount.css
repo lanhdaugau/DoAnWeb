@@ -153,22 +153,15 @@ li {
 
 .menubar ul li {
   list-style-type: none;
-  padding-left: 4.5vw;
+  
+  text-align: center;
 }
 
 .menubar ul li:first-child {
   position: relative;
 }
-
-.menubar ul li:first-child::after {
-  content: " ";
-  width: 11vw;
-  color: red;
-  background-color: red;
-  height: 1px;
-  position: absolute;
-  left: 0;
-  bottom: 0%;
+.selected{
+  border-bottom: 1px solid red;
 }
 
 .Tfo7DW {
@@ -224,18 +217,28 @@ div:nth-child(3) {
 
 .delete-btn {
   padding: 4px;
-  border: 1px solid red;
+  border: 2px solid red;
 
   border-radius: 5px;
 }
 
 .update-btn {
   padding: 4px;
-  border: 1px solid rgb(15, 156, 22);
+  border: 2px solid rgb(15, 156, 22);
 
   border-radius: 5px;
 }
-
+.delivery-btn{
+  padding: 4px;
+  border: 2px solid rgb(7, 7, 110);
+  margin-top: +5px;
+  border-radius: 5px;
+}
+.delivery-all{
+  padding: 4px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
 @media only screen and (max-width:800px){
   .inf {
     display: none;
@@ -250,10 +253,11 @@ div:nth-child(3) {
 .total{
   background-color: #a62424;
   color: white;
-  text-align: right;
+  justify-content: space-between;
   height: 30px;
   padding: 20px 20px 10px 20px;
   width: auto ;
+  display: flex;
 }
 .price-total{
   font-size: x-large;

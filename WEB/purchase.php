@@ -3,9 +3,7 @@ require_once "controller.php";
 require_once "connection.php";
 
 $user = $_SESSION['user'];
-if($user==""){
-    header("location: index.html");
-}
+
 
 $sql = "SELECT * FROM PRODUCT p,PRO_DETAIL d WHERE user='$user' and p.id=d.id ";
 
@@ -70,10 +68,10 @@ $fetch_data = mysqli_fetch_assoc($result);
         <div class="item">
             <div class="menubar">
                 <ul>
-                    <li>Tất cả</li>
+                    <li class="selected">Tất cả</li>
                     <li>Chờ xác nhận</li>
                     <li>Chờ lấy hàng</li>
-                    <li>Đang giao</li>
+                    <li onclick="window.open('delivery.php','_self')">Đang giao</li>
                     <li>Đã giao</li>
                     <li>Đã hủy</li>
                 </ul>
@@ -127,7 +125,9 @@ $fetch_data = mysqli_fetch_assoc($result);
                                         <input type="submit" class="delete-btn" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không?');" value="Xóa" name="delete">
                                   </form>
                                 
-                                 
+                                 <form action="purchase.php?id=<?=$key['id'] ?>" method="POST">
+                                    <input type="submit" class="delivery-btn" value="Thanh toán" name="delivery">
+                                 </form>
                                   
         
                                 </td>
@@ -168,9 +168,20 @@ $fetch_data = mysqli_fetch_assoc($result);
                     </table>
                     <br>
                     <div class="total">
-                        Tổng giá trị các sản phẩm : <span class="price-total">
-                            <?php echo  number_format($price_total,0,',',','). " VND"?>
+                        <span >
+                           <form action="purchase.php?user=<?php echo $_SESSION['user'] ?>" method="POST">
+                           <input type="submit" value="Thanh toán tất cả" class="delivery-all" name="delivery-all">
+                           </form>
+                       
                         </span>
+                         <span >
+                         Tổng giá trị các sản phẩm :
+                         <span class="price-total">
+                         <?php echo  number_format($price_total,0,',',','). " VND"?>
+                         </span>
+                           
+                        </span>
+                        
                     </div>
                     <br>
 

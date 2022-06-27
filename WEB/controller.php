@@ -203,3 +203,37 @@ if (isset($_POST['update'])) {
      WHERE id='$id' and user='$user_session'");
     }
 }
+if(isset($_POST['delivery'])){
+    $id = $_GET['id'];
+    $user_session = $_SESSION['user'];
+   
+    $result= mysqli_query($con, "SELECT * FROM PRODUCT WHERE id='$id' and user='$user_session'");
+    if(mysqli_num_rows($result)>0){
+        $fetch_data=mysqli_fetch_assoc($result);
+        $fetch_id=$fetch_data['id'];
+        $today = new DateTimeImmutable();
+       $date= $today->format('d-m-Y');
+        $fetch_quantity=$fetch_data['quantity'];
+        mysqli_query($con, "INSERT INTO ORDER_PRODUCT(id,quantity,user,purchase_date)
+        VALUES('$fetch_id','$fetch_quantity','$user_session','$date')
+        ");
+         mysqli_query($con, "DELETE FROM PRODUCT WHERE id='$id' and user='$user_session'");
+    }
+   
+}
+if(isset($_POST['delivery-all'])){
+    $today = new DateTimeImmutable();
+    $date= $today->format('d-m-Y');
+    $user=$_GET['user'];
+    $result=mysqli_query($con, "SELECT * FROM PRODUCT WHERE user='$user'");
+    if(mysqli_num_rows($result)>0){
+        foreach ($result as $key ) {
+            $id=$key['id'];
+            $quantity=$key['quantity'];
+            mysqli_query($con, "INSERT INTO ORDER_PRODUCT(id,quantity,user,purchase_date)
+            VALUES('$id','$quantity','$user','$date')
+            ");
+        }
+    }
+    mysqli_query($con, "DELETE FROM PRODUCT WHERE user='$user'");
+}
